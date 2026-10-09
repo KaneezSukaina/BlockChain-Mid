@@ -1,0 +1,257 @@
+IoV Trust Management Using MultiChain
+1. Project Overview
+
+This project implements an academic prototype of an Internet of Vehicles (IoV) Trust Management System using Python and MultiChain blockchain. It simulates how vehicles can report suspected malicious behavior, how Roadside Units (RSUs) analyze reports, and how trust scores can be used to control access to protected IoV operations.
+
+The system uses a Trusted Authority (TA), two Roadside Units (RSU1 and RSU2), and six simulated vehicles (V01–V06). MultiChain streams store vehicle registration data, misbehavior reports, trust-score updates, session results, revocation records, and reward claims.
+
+The project is intended for research and academic experimentation. It is not a production-ready vehicle security system.
+
+2. Project Objectives
+Maintain vehicle identities and registration records.
+Collect misbehavior reports from multiple simulated vehicles.
+Analyze reports and require a minimum number of independent reporters.
+Update vehicle trust scores based on the configured analysis rules.
+Simulate beacon plausibility checks and enforcement by the Trusted Authority.
+Record reporter reward claims and support TrustCredit asset transfers.
+Control access to protected operations using reward-claim, trust-score, and revocation checks.
+Store important events on a MultiChain blockchain for traceability.
+3. System Architecture
+
+The prototype consists of the following components:
+
+Trusted Authority (TA): Manages vehicle trust and applies configured enforcement rules.
+RSU1 and RSU2: Support report analysis and reward-pool operations.
+Vehicle nodes: Represent six simulated IoV vehicles.
+MultiChain blockchain: Stores records in streams and supports TrustCredit transfers.
+Python application: Coordinates registration, report submission, analysis, rewards, and access checks.
+Conceptual Architecture
+       Vehicles V01–V06
+               |
+               | Misbehavior reports
+               v
+   MultiChain: misbehavior_reports
+               |
+               v
+        RSU1 / RSU2
+      Report verification
+      Unique reporter count
+      Majority analysis
+               |
+               v
+   MultiChain: trust_scores
+               |
+               v
+        Trusted Authority
+       Trust and revocation
+             checks
+               |
+               v
+     Protected IoV operation
+               ^
+               |
+      Reward-claim verification
+               |
+               v
+   MultiChain: reward_claims
+               |
+               v
+       TrustCredit transfer
+
+Access decisions and session events
+       are recorded on-chain.
+
+Figure 1. Conceptual architecture of the IoV trust-management prototype.
+
+4. Technology Stack
+Technology	Purpose
+Python 3	Application logic and blockchain interaction
+MultiChain	Private blockchain network
+MultiChain streams	Storage of registration, reports, scores, claims, and audit events
+TrustCredit asset	Simulated reporter reward
+Windows CMD	Execution and testing environment
+Git and GitHub	Source-code version control and project submission
+
+The Python script uses standard-library modules. MultiChain must be installed and configured separately.
+
+5. MultiChain Configuration
+
+The application uses a chain named iovchain and expects four configured node environments.
+
+Node	RPC port	P2P port
+TA	7446	7447
+RSU1	7448	7449
+RSU2	7450	7451
+VEH	7452	7453
+
+The configuration paths expected by the application are:
+
+TA: %APPDATA%\MultiChain\iovchain\multichain.conf
+RSU1: %USERPROFILE%\iov\rsu1\iovchain\multichain.conf
+RSU2: %USERPROFILE%\iov\rsu2\iovchain\multichain.conf
+VEH: %USERPROFILE%\iov\veh\iovchain\multichain.conf
+
+The RPC ports and credentials in these configuration files must match the running daemons and the Python script.
+
+Security note: Never upload RPC credentials, wallet files, private keys, or other secrets to a public GitHub repository.
+
+6. Blockchain Streams and Asset
+
+The application uses the following streams:
+
+Stream	Purpose
+vehicle_registry	Vehicle registration and identity records
+misbehavior_reports	Reports submitted by vehicles
+trust_scores	Trust-score changes and analysis results
+session_results	Session outcomes and access-audit records
+revocations	Vehicle restrictions and revocation records
+reward_claims	Reporter reward-claim status and related events
+
+The TrustCredit asset represents rewards distributed to reporting vehicles. Reward-pool funding and transfers depend on the available balance and MultiChain permissions.
+
+7. Installation and Execution
+Prerequisites
+Install Python 3.
+Install MultiChain for Windows.
+Configure and start the four required node daemons.
+Place iov_trust.py in the project directory.
+Ensure that the RPC configuration matches the application settings.
+Step 1: Open the project directory
+cd /d C:\Users\<your-user>\blockchain\blockchain
+
+Replace <your-user> with your Windows username.
+
+Step 2: Check Python syntax
+py -3 -m py_compile iov_trust.py
+
+If the command completes without an error, Python has successfully compiled the script.
+
+Step 3: Set up the application
+py -3 iov_trust.py setup
+
+The setup command is designed to reuse the existing iovchain, streams, and TrustCredit asset where available. It also attempts to configure permissions and fund reward pools.
+
+Important: Back up iov_roles.json before modifying the project or running setup. This file contains the application's local role and vehicle-address state. Keep it alongside the script when reusing an existing deployment.
+
+Step 4: Run a transaction cycle
+
+To target a specific vehicle:
+
+py -3 iov_trust.py transaction-cycle V03
+
+To select a target dynamically:
+
+py -3 iov_trust.py transaction-cycle RANDOM
+
+A transaction cycle simulates a misbehavior incident, report submission, RSU analysis, trust-score processing, enforcement, reward handling, and access checks.
+
+Running a new cycle can add blockchain records and change trust scores. Use a new cycle only when you intend to simulate another incident.
+
+8. Transaction Workflow
+Step 1: Select a target vehicle
+
+The target can be selected explicitly, such as V03, or dynamically using RANDOM.
+
+Step 2: Submit misbehavior reports
+
+Four other simulated vehicles are selected as reporters. Each submits a report against the target vehicle.
+
+Step 3: Analyze reports
+
+The RSU analyzes reports associated with the session. The configured logic checks the number of unique reporters and the majority condition before applying a trust-score deduction.
+
+Step 4: Update trust score
+
+If the analysis requirements are satisfied, the application publishes a trust-score update to the trust_scores stream. The configured deduction and thresholds are prototype parameters, not universal IoV security rules.
+
+Step 5: Apply enforcement rules
+
+The Trusted Authority evaluates the recorded trust information and applies the configured restriction or revocation logic.
+
+Step 6: Process reporter rewards
+
+Reward claims are recorded in the reward_claims stream. The application supports reward-claim processing using TrustCredit. A claim is not considered successfully paid merely because a claim record exists; the asset transfer and its transaction ID must also be verified.
+
+Step 7: Check protected access
+
+The application evaluates the protected operation using the applicable reward-claim requirement, trust-score rules, and revocation status.
+
+Completing a reward claim should not override an active revocation or an insufficient trust score.
+
+Step 8: Verify blockchain records
+
+The final output should be checked against the actual stream records, transaction IDs, asset balances, and access decisions.
+
+Figure 2. Transaction workflow of the IoV trust-management prototype.
+
+9. Additional Commands
+
+The following commands are available in the application:
+
+Command	Purpose
+py -3 iov_trust.py status	Display vehicle status and node information
+py -3 iov_trust.py rewards	Display TrustCredit balances and reward claims
+py -3 iov_trust.py enforce	Run configured enforcement logic
+py -3 iov_trust.py access V01	Check access for a vehicle
+py -3 iov_trust.py access-claim V01	Check access with the reward-claim requirement
+py -3 iov_trust.py claim V01	Attempt to claim a pending reward
+py -3 iov_trust.py recover V03	Run the prototype recovery procedure
+py -3 iov_trust.py demo	Run the demonstration workflow
+py -3 iov_trust.py simulate S1	Run a predefined simulation scenario
+py -3 iov_trust.py bench 100	Run the configured benchmark
+py -3 iov_trust.py beacon-test V03 normal	Test a normal beacon sequence
+py -3 iov_trust.py beacon-test V03 teleport	Test a simulated abnormal beacon sequence
+
+For exact arguments supported by the installed script, run:
+
+py -3 iov_trust.py
+10. Testing and Verification
+
+After running the application, collect evidence for the following checks:
+
+All four nodes connect to the expected chain.
+Reports are published by the selected vehicle addresses.
+The RSU identifies the expected number of unique reporters.
+The trust-score update has a valid transaction ID.
+Reward claims appear in the correct stream.
+Successful rewards correspond to actual TrustCredit transfers.
+Access is denied when the required claim is pending or missing.
+Access remains subject to trust-score and revocation rules after a claim.
+Session and access-audit records are visible on-chain.
+
+Capture screenshots of the CMD output and relevant blockchain records for the implementation report.
+
+Do not report a feature as successfully tested unless the test has actually been executed and its result verified.
+
+11. Troubleshooting
+Publishing permission error
+
+If MultiChain reports that publishing is not allowed from an address, check the write permission for that address on the relevant stream. Run the setup command to reapply the configured permissions, then inspect the failed operation.
+
+Zero unique reporters
+
+Check that reports are present in misbehavior_reports, use the expected session ID, and contain the reporter and target fields expected by the analysis logic.
+
+Empty reward-claim list
+
+Confirm that the claim-creation step completed and that the records were published to reward_claims. A successful setup alone does not mean that reward claims have been created.
+
+Zero reward balance
+
+Check the output of:
+
+py -3 iov_trust.py rewards
+
+Verify that reward-pool funding succeeded and that the RSU has the necessary permissions to transfer the asset.
+
+Access remains denied after claiming
+
+A completed claim does not bypass the trust-score threshold or an active revocation. Check the access-decision reason and the vehicle's latest recorded status.
+
+12. Limitations
+The project uses simulated vehicles rather than real connected vehicles.
+The trust model and report-majority logic are simplified for academic experimentation.
+A majority of reports does not independently prove malicious behavior.
+The implementation depends on correct MultiChain permissions, RPC configuration, and wallet balances.
+Performance results depend on the local environment and the test workload.
+This prototype has not been security-audited for production use.

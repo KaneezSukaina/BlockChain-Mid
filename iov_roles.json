@@ -1,0 +1,46 @@
+{
+  "vehicles": [
+    {
+      "id": "V01",
+      "address": "1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo",
+      "trust": 100.0,
+      "status": "active"
+    },
+    {
+      "id": "V02",
+      "address": "1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk",
+      "trust": 100.0,
+      "status": "active"
+    },
+    {
+      "id": "V03",
+      "address": "1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd",
+      "trust": 48.0,
+      "status": "restricted"
+    },
+    {
+      "id": "V04",
+      "address": "14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg",
+      "trust": 100.0,
+      "status": "active"
+    },
+    {
+      "id": "V05",
+      "address": "1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm",
+      "trust": 100.0,
+      "status": "active"
+    },
+    {
+      "id": "V06",
+      "address": "18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd",
+      "trust": 100.0,
+      "status": "active"
+    }
+  ],
+  "addresses": {
+    "TA": "1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C",
+    "RSU1": "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc",
+    "RSU2": "1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY",
+    "VEH": "17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW"
+  }
+}
