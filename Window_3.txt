@@ -1,0 +1,17 @@
+Microsoft Windows [Version 10.0.26200.9445]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\kanee>cd /d "%USERPROFILE%\Downloads\multichain-windows-2.3.3"
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichaind.exe iovchain -datadir=%USERPROFILE%\iov\rsu1 -port=7449 -rpcport=7448 -daemon
+
+MultiChain 2.3.3 Daemon (Community Edition, latest protocol 20013)
+
+Retrieving blockchain parameters from the seed node 127.0.0.1:7447 ...
+Other nodes can connect to this node using:
+multichaind iovchain@192.168.0.101:7449
+
+Listening for API requests on port 7448 (local only - see rpcallowip setting)
+
+Node ready.
+

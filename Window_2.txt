@@ -1,0 +1,2643 @@
+Microsoft Windows [Version 10.0.26200.9445]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\kanee>cd /d "%USERPROFILE%\Downloads\multichain-windows-2.3.3"
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain getblockchainparams
+{"method":"getblockchainparams","params":[],"id":"75601367-1791560132","chain_name":"iovchain"}
+
+{
+    "chain-protocol" : "multichain",
+    "chain-description" : "IoV adaptive trust management",
+    "root-stream-name" : "root",
+    "root-stream-open" : false,
+    "chain-is-testnet" : false,
+    "target-block-time" : 5,
+    "maximum-block-size" : 8388608,
+    "maximum-chunk-size" : 1048576,
+    "maximum-chunk-count" : 1024,
+    "default-network-port" : 7447,
+    "default-rpc-port" : 7446,
+    "anyone-can-connect" : false,
+    "anyone-can-send" : false,
+    "anyone-can-receive" : false,
+    "anyone-can-receive-empty" : true,
+    "anyone-can-create" : false,
+    "anyone-can-issue" : false,
+    "anyone-can-mine" : false,
+    "anyone-can-activate" : false,
+    "anyone-can-admin" : false,
+    "support-miner-precheck" : true,
+    "allow-arbitrary-outputs" : false,
+    "allow-p2sh-outputs" : true,
+    "allow-multisig-outputs" : true,
+    "setup-first-blocks" : 60,
+    "mining-diversity" : 0.5,
+    "admin-consensus-upgrade" : 0.5,
+    "admin-consensus-txfilter" : 0.5,
+    "admin-consensus-admin" : 0.5,
+    "admin-consensus-activate" : 0.5,
+    "admin-consensus-mine" : 0.5,
+    "admin-consensus-create" : 0,
+    "admin-consensus-issue" : 0,
+    "lock-admin-mine-rounds" : 10,
+    "mining-requires-peers" : true,
+    "mine-empty-rounds" : 10,
+    "mining-turnover" : 0.5,
+    "first-block-reward" : -1,
+    "initial-block-reward" : 0,
+    "reward-halving-interval" : 52560000,
+    "reward-spendable-delay" : 1,
+    "minimum-per-output" : 0,
+    "maximum-per-output" : 100000000000000,
+    "minimum-offchain-fee" : 0,
+    "minimum-relay-fee" : 0,
+    "native-currency-multiple" : 100000000,
+    "skip-pow-check" : false,
+    "pow-minimum-bits" : 8,
+    "target-adjust-freq" : -1,
+    "allow-min-difficulty-blocks" : false,
+    "only-accept-std-txs" : true,
+    "max-std-tx-size" : 4194304,
+    "max-std-op-returns-count" : 32,
+    "max-std-op-return-size" : 2097152,
+    "max-std-op-drops-count" : 5,
+    "max-std-element-size" : 40000,
+    "chain-name" : "iovchain",
+    "protocol-version" : 20013,
+    "network-message-start" : "f5e4d1e3",
+    "address-pubkeyhash-version" : "00f8ae09",
+    "address-scripthash-version" : "0544edb5",
+    "private-key-version" : "8022e5f6",
+    "address-checksum-value" : "ca79ba23",
+    "genesis-pubkey" : "0306cdd3c0096fb660d1fed6f78c1ac89c00c1066c944f16d46b38ff7b45a5b3f6",
+    "genesis-version" : 1,
+    "genesis-timestamp" : 1791559034,
+    "genesis-nbits" : 536936447,
+    "genesis-nonce" : 578,
+    "genesis-pubkey-hash" : "6efebad56bca42fa05fbdd745e3b116bc97f8bd9",
+    "genesis-hash" : "0034d2264684e938ad40b46bf15ec4415b05234579f351a793a81ed22384ac0d",
+    "chain-params-hash" : "343c6a7be6d03e91fe15a8c3a2c9af364b177ad3d897e00d5f3d62a2b86da888"
+}
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichaind.exe iovchain@127.0.0.1:7447 -datadir=%USERPROFILE%\iov\rsu1 -port=7449 -rpcport=7448
+
+MultiChain 2.3.3 Daemon (Community Edition, latest protocol 20013)
+
+Retrieving blockchain parameters from the seed node 127.0.0.1:7447 ...
+Blockchain successfully initialized.
+
+Please ask blockchain admin or user having activate permission to let you connect and/or transact:
+multichain-cli iovchain grant 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc connect
+multichain-cli iovchain grant 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc connect,send,receive
+
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain grant 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc connect,mine
+{"method":"grant","params":["1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc","connect,mine"],"id":"26881008-1791560219","chain_name":"iovchain"}
+
+9de2a231110b2fb8a97c4bac95f9ffd8a441b51e4ca3ea35fb5f1fba8bb0e905
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichaind.exe iovchain@127.0.0.1:7447 -datadir=%USERPROFILE%\iov\rsu2 -port=7451 -rpcport=7450
+
+MultiChain 2.3.3 Daemon (Community Edition, latest protocol 20013)
+
+Retrieving blockchain parameters from the seed node 127.0.0.1:7447 ...
+Blockchain successfully initialized.
+
+Please ask blockchain admin or user having activate permission to let you connect and/or transact:
+multichain-cli iovchain grant 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY connect
+multichain-cli iovchain grant 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY connect,send,receive
+
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain grant 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY connect,mine
+{"method":"grant","params":["1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY","connect,mine"],"id":"42891323-1791560268","chain_name":"iovchain"}
+
+51ccc8b35a3ddfb82fbb90454e11ba7a1812e16f6cfa948403c04385f04ef250
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichaind.exe iovchain@127.0.0.1:7447 -datadir=%USERPROFILE%\iov\veh -port=7453 -rpcport=7452
+
+MultiChain 2.3.3 Daemon (Community Edition, latest protocol 20013)
+
+Retrieving blockchain parameters from the seed node 127.0.0.1:7447 ...
+Blockchain successfully initialized.
+
+Please ask blockchain admin or user having activate permission to let you connect and/or transact:
+multichain-cli iovchain grant 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW connect
+multichain-cli iovchain grant 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW connect,send,receive
+
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain grant 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW connect
+{"method":"grant","params":["17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW","connect"],"id":"95841547-1791560312","chain_name":"iovchain"}
+
+28dcd14ca5864136fa98f22bc5457929ef23b66cbb3eb542c800bd5e3223d7d9
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain listpermissions mine
+{"method":"listpermissions","params":["mine"],"id":"44720603-1791560431","chain_name":"iovchain"}
+
+[
+    {
+        "address" : "1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C",
+        "for" : null,
+        "type" : "mine",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY",
+        "for" : null,
+        "type" : "mine",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc",
+        "for" : null,
+        "type" : "mine",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    }
+]
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain getpeerinfo
+{"method":"getpeerinfo","params":[],"id":"74681234-1791560444","chain_name":"iovchain"}
+
+[
+    {
+        "id" : 5,
+        "addr" : "192.168.0.101:7449",
+        "addrlocal" : "192.168.0.101:57697",
+        "services" : "0000000000000001",
+        "lastsend" : 1791560442,
+        "lastrecv" : 1791560442,
+        "bytessent" : 26268,
+        "bytesrecv" : 13665,
+        "conntime" : 1791560344,
+        "pingtime" : 0.108827,
+        "version" : 70002,
+        "subver" : "/MultiChain:0.2.0.13/",
+        "handshakelocal" : "1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C",
+        "handshake" : "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc",
+        "inbound" : false,
+        "encrypted" : false,
+        "startingheight" : 0,
+        "banscore" : 0,
+        "synced_headers" : 76,
+        "synced_blocks" : 76,
+        "inflight" : [
+        ],
+        "whitelisted" : false
+    },
+    {
+        "id" : 8,
+        "addr" : "127.0.0.1:57700",
+        "addrlocal" : "127.0.0.1:7447",
+        "services" : "0000000000000001",
+        "lastsend" : 1791560442,
+        "lastrecv" : 1791560439,
+        "bytessent" : 2836,
+        "bytesrecv" : 3572,
+        "conntime" : 1791560348,
+        "pingtime" : 0.108581,
+        "version" : 70002,
+        "subver" : "/MultiChain:0.2.0.13/",
+        "handshakelocal" : "1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C",
+        "handshake" : "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc",
+        "inbound" : true,
+        "encrypted" : false,
+        "startingheight" : 59,
+        "banscore" : 0,
+        "synced_headers" : 76,
+        "synced_blocks" : 76,
+        "inflight" : [
+        ],
+        "whitelisted" : false
+    },
+    {
+        "id" : 11,
+        "addr" : "192.168.0.101:7451",
+        "addrlocal" : "192.168.0.101:61585",
+        "services" : "0000000000000001",
+        "lastsend" : 1791560442,
+        "lastrecv" : 1791560442,
+        "bytessent" : 21625,
+        "bytesrecv" : 7718,
+        "conntime" : 1791560386,
+        "pingtime" : 0.110629,
+        "version" : 70002,
+        "subver" : "/MultiChain:0.2.0.13/",
+        "handshakelocal" : "1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C",
+        "handshake" : "1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY",
+        "inbound" : false,
+        "encrypted" : false,
+        "startingheight" : 0,
+        "banscore" : 0,
+        "synced_headers" : 76,
+        "synced_blocks" : 76,
+        "inflight" : [
+        ],
+        "whitelisted" : false
+    },
+    {
+        "id" : 14,
+        "addr" : "127.0.0.1:7451",
+        "addrlocal" : "127.0.0.1:61602",
+        "services" : "0000000000000001",
+        "lastsend" : 1791560442,
+        "lastrecv" : 1791560441,
+        "bytessent" : 2364,
+        "bytesrecv" : 2242,
+        "conntime" : 1791560391,
+        "pingtime" : 0.106157,
+        "version" : 70002,
+        "subver" : "/MultiChain:0.2.0.13/",
+        "handshakelocal" : "1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C",
+        "handshake" : "1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY",
+        "inbound" : false,
+        "encrypted" : false,
+        "startingheight" : 67,
+        "banscore" : 0,
+        "synced_headers" : 76,
+        "synced_blocks" : 76,
+        "inflight" : [
+        ],
+        "whitelisted" : false
+    },
+    {
+        "id" : 17,
+        "addr" : "192.168.0.101:7453",
+        "addrlocal" : "192.168.0.101:50790",
+        "services" : "0000000000000001",
+        "lastsend" : 1791560442,
+        "lastrecv" : 1791560442,
+        "bytessent" : 10718,
+        "bytesrecv" : 6641,
+        "conntime" : 1791560408,
+        "pingtime" : 0.108197,
+        "version" : 70002,
+        "subver" : "/MultiChain:0.2.0.13/",
+        "handshakelocal" : "1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C",
+        "handshake" : "17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW",
+        "inbound" : false,
+        "encrypted" : false,
+        "startingheight" : 0,
+        "banscore" : 0,
+        "synced_headers" : 76,
+        "synced_blocks" : 76,
+        "inflight" : [
+        ],
+        "whitelisted" : false
+    },
+    {
+        "id" : 19,
+        "addr" : "127.0.0.1:50813",
+        "addrlocal" : "127.0.0.1:7447",
+        "services" : "0000000000000001",
+        "lastsend" : 1791560443,
+        "lastrecv" : 1791560443,
+        "bytessent" : 2234,
+        "bytesrecv" : 1847,
+        "conntime" : 1791560412,
+        "pingtime" : 0.015463,
+        "version" : 70002,
+        "subver" : "/MultiChain:0.2.0.13/",
+        "handshakelocal" : "1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C",
+        "handshake" : "17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW",
+        "inbound" : true,
+        "encrypted" : false,
+        "startingheight" : 71,
+        "banscore" : 0,
+        "synced_headers" : 76,
+        "synced_blocks" : 76,
+        "inflight" : [
+        ],
+        "whitelisted" : false
+    }
+]
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>notepad "%USERPROFILE%\blockchain\blockchain\iov_trust.py"
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>cd /d "%USERPROFILE%\blockchain\blockchain"
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py demo
+
+--- Session S1: normal ---
+
+ERROR: RSU1.publishfrom HTTP 500: {"result":null,"error":{"code":-704,"message":"from-address doesn't have send permission"},"id":"iov-trust"}
+
+Check that all four MultiChain daemons are running and their RPC ports/config files match this script.
+
+C:\Users\kanee\blockchain\blockchain>cd /d "%USERPROFILE%\Downloads\multichain-windows-2.3.3"
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain grant 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C send,receive
+{"method":"grant","params":["1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C","send,receive"],"id":"95113681-1791562907","chain_name":"iovchain"}
+
+2116119a58b526da0ac176a6c3151789ac3170ae1e1b89f88983c94bdea90e90
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain grant 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc send,receive
+{"method":"grant","params":["1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc","send,receive"],"id":"69726248-1791562908","chain_name":"iovchain"}
+
+95c2b494d37231ae07f7087c9901936b9a23e7b09ffe32cb8bb58b6a82557546
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain grant 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY send,receive
+{"method":"grant","params":["1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY","send,receive"],"id":"44336069-1791562909","chain_name":"iovchain"}
+
+5e36823d24964d4837e9a5d8deecc0b0cd9329e228f20fbcbd65aae35fd8a77e
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain grant 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW send,receive
+{"method":"grant","params":["17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW","send,receive"],"id":"58173772-1791562912","chain_name":"iovchain"}
+
+b2876b71d771ab446453c6c7aef2747e1f995b79c3606fa223639e5eb8af572a
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain grant 1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo send,receive
+{"method":"grant","params":["1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo","send,receive"],"id":"37359538-1791562927","chain_name":"iovchain"}
+
+975972517da218f132312b392d835fea5fff7d4a0aa7fe0c75850f9512def863
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain grant 1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk send,receive
+{"method":"grant","params":["1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk","send,receive"],"id":"11972106-1791562928","chain_name":"iovchain"}
+
+7abb8c55f4df6d542f83709551d60142e32dad6d0dc636f0ee710b5aa2e5e431
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain grant 1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd send,receive
+{"method":"grant","params":["1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd","send,receive"],"id":"76587420-1791562929","chain_name":"iovchain"}
+
+1206337bae56c5b5c5139b026d5ea09e7ace22580725e84fa29e127e652b9f81
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain grant 14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg send,receive
+{"method":"grant","params":["14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg","send,receive"],"id":"51197241-1791562930","chain_name":"iovchain"}
+
+3f44cd7c2188a0bd6eb19d06eb232c0d04785bc3e0107308e50c5b4d51c9cdba
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain grant 1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm send,receive
+{"method":"grant","params":["1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm","send,receive"],"id":"25809808-1791562931","chain_name":"iovchain"}
+
+b651873bb452808cd0444e070ebceed8bca5e52468e69622b1965425900a409b
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain grant 18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd send,receive
+{"method":"grant","params":["18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd","send,receive"],"id":"39647511-1791562934","chain_name":"iovchain"}
+
+be38f7a5bb9a4c73f0c5749b0494ce7f6fd6159e91c227ef8506cdc714520dce
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain listpermissions send,receive
+{"method":"listpermissions","params":["send,receive"],"id":"97286294-1791562953","chain_name":"iovchain"}
+
+[
+    {
+        "address" : "14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg",
+        "for" : null,
+        "type" : "send",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg",
+        "for" : null,
+        "type" : "receive",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW",
+        "for" : null,
+        "type" : "send",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW",
+        "for" : null,
+        "type" : "receive",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd",
+        "for" : null,
+        "type" : "send",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd",
+        "for" : null,
+        "type" : "receive",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm",
+        "for" : null,
+        "type" : "send",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm",
+        "for" : null,
+        "type" : "receive",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C",
+        "for" : null,
+        "type" : "send",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C",
+        "for" : null,
+        "type" : "receive",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk",
+        "for" : null,
+        "type" : "send",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk",
+        "for" : null,
+        "type" : "receive",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY",
+        "for" : null,
+        "type" : "send",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY",
+        "for" : null,
+        "type" : "receive",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo",
+        "for" : null,
+        "type" : "send",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo",
+        "for" : null,
+        "type" : "receive",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc",
+        "for" : null,
+        "type" : "send",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc",
+        "for" : null,
+        "type" : "receive",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd",
+        "for" : null,
+        "type" : "send",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    },
+    {
+        "address" : "1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd",
+        "for" : null,
+        "type" : "receive",
+        "startblock" : 0,
+        "endblock" : 4294967295
+    }
+]
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>cd /d "%USERPROFILE%\blockchain\blockchain"
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py demo
+
+--- Session S1: normal ---
+Session submitted in 0.121s
+
+--- Session S2: misbehavior_detected ---
+Misbehavior report R-1791563030889 recorded (bc6422eeb374db94bad48f1430c1d5aa5b9539ef60195898612154df7699f119)
+Session submitted in 0.060s
+
+--- Session S3: post-mitigation ---
+Session submitted in 0.147s
+
+=== Trust analysis by RSU1 ===
+V01: trust=100.0, reports=0, status=active
+V02: trust=100.0, reports=0, status=active
+V03: trust=100.0, reports=0, status=active
+V04: trust=100.0, reports=0, status=active
+V05: trust=100.0, reports=0, status=active
+V06: trust=100.0, reports=0, status=active
+
+=== TA enforcement ===
+V01: no trust score yet; skipped
+V02: no trust score yet; skipped
+V03: no trust score yet; skipped
+V04: no trust score yet; skipped
+V05: no trust score yet; skipped
+V06: no trust score yet; skipped
+
+Final trust table:
+Vehicle  Trust  Status      Address
+-------  -----  ----------  -------
+V01      100.0  active      1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+V02      100.0  active      1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+V03      100.0  active      1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+V04      100.0  active      14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+V05      100.0  active      1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+V06      100.0  active      18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+
+Node connectivity:
+TA: blocks=150, peers=6
+RSU1: blocks=150, peers=6
+RSU2: blocks=150, peers=6
+VEH: blocks=150, peers=6
+
+C:\Users\kanee\blockchain\blockchain>cd /d "%USERPROFILE%\Downloads\multichain-windows-2.3.3"
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain liststreams
+{"method":"liststreams","params":[],"id":"59887691-1791563114","chain_name":"iovchain"}
+
+[
+    {
+        "name" : "root",
+        "createtxid" : "f07ed96a02e48d03b7d65e3ef9e30cb2165546d3ba4e780fd38945213a35bdb2",
+        "streamref" : "0-0-0",
+        "restrict" : {
+            "write" : true,
+            "read" : false,
+            "onchain" : false,
+            "offchain" : false
+        },
+        "details" : {
+        },
+        "subscribed" : true,
+        "retrieve" : true,
+        "canretrieve" : true,
+        "indexes" : {
+            "items" : true,
+            "keys" : true,
+            "publishers" : true,
+            "items-local" : true,
+            "keys-local" : true,
+            "publishers-local" : true
+        },
+        "synchronized" : true,
+        "items" : 0,
+        "confirmed" : 0,
+        "keys" : 0,
+        "publishers" : 0
+    },
+    {
+        "name" : "vehicle_registry",
+        "createtxid" : "b777b46a9c7e5f1a6122602e57cc0d3159bf721e9da2fd7fcd26fb2728531182",
+        "streamref" : "81-265-30647",
+        "restrict" : {
+            "write" : true,
+            "read" : false,
+            "onchain" : false,
+            "offchain" : false
+        },
+        "details" : {
+        },
+        "subscribed" : true,
+        "retrieve" : true,
+        "canretrieve" : true,
+        "indexes" : {
+            "items" : true,
+            "keys" : true,
+            "publishers" : true,
+            "items-local" : true,
+            "keys-local" : true,
+            "publishers-local" : true
+        },
+        "synchronized" : true,
+        "items" : 6,
+        "confirmed" : 6,
+        "keys" : 6,
+        "publishers" : 1
+    },
+    {
+        "name" : "misbehavior_reports",
+        "createtxid" : "ddfb6634d8bc0afff0d46dfae1f1d895b8e04df669ad32b6df3758d4ef6376c1",
+        "streamref" : "81-496-64477",
+        "restrict" : {
+            "write" : true,
+            "read" : false,
+            "onchain" : false,
+            "offchain" : false
+        },
+        "details" : {
+        },
+        "subscribed" : true,
+        "retrieve" : true,
+        "canretrieve" : true,
+        "indexes" : {
+            "items" : true,
+            "keys" : true,
+            "publishers" : true,
+            "items-local" : true,
+            "keys-local" : true,
+            "publishers-local" : true
+        },
+        "synchronized" : true,
+        "items" : 1,
+        "confirmed" : 1,
+        "keys" : 1,
+        "publishers" : 1
+    },
+    {
+        "name" : "trust_scores",
+        "createtxid" : "ecce60c3e394e109222fdaee4803c98027728abc03ab9c0242e21511dcf6d803",
+        "streamref" : "81-730-52972",
+        "restrict" : {
+            "write" : true,
+            "read" : false,
+            "onchain" : false,
+            "offchain" : false
+        },
+        "details" : {
+        },
+        "subscribed" : true,
+        "retrieve" : true,
+        "canretrieve" : true,
+        "indexes" : {
+            "items" : true,
+            "keys" : true,
+            "publishers" : true,
+            "items-local" : true,
+            "keys-local" : true,
+            "publishers-local" : true
+        },
+        "synchronized" : true,
+        "items" : 6,
+        "confirmed" : 6,
+        "keys" : 6,
+        "publishers" : 1
+    },
+    {
+        "name" : "session_results",
+        "createtxid" : "bb464a2da16187ef5afdcf82cccf24a79ff131a1e0f4cdbc5dd0a3cd764f48ac",
+        "streamref" : "81-957-18107",
+        "restrict" : {
+            "write" : true,
+            "read" : false,
+            "onchain" : false,
+            "offchain" : false
+        },
+        "details" : {
+        },
+        "subscribed" : true,
+        "retrieve" : true,
+        "canretrieve" : true,
+        "indexes" : {
+            "items" : true,
+            "keys" : true,
+            "publishers" : true,
+            "items-local" : true,
+            "keys-local" : true,
+            "publishers-local" : true
+        },
+        "synchronized" : true,
+        "items" : 13,
+        "confirmed" : 13,
+        "keys" : 3,
+        "publishers" : 1
+    },
+    {
+        "name" : "revocations",
+        "createtxid" : "7d6702b8c61649065376a382c04a056c47f9980d8dc23b0f5ce5c6b7917dc5d2",
+        "streamref" : "81-1187-26493",
+        "restrict" : {
+            "write" : true,
+            "read" : false,
+            "onchain" : false,
+            "offchain" : false
+        },
+        "details" : {
+        },
+        "subscribed" : true,
+        "retrieve" : true,
+        "canretrieve" : true,
+        "indexes" : {
+            "items" : true,
+            "keys" : true,
+            "publishers" : true,
+            "items-local" : true,
+            "keys-local" : true,
+            "publishers-local" : true
+        },
+        "synchronized" : true,
+        "items" : 0,
+        "confirmed" : 0,
+        "keys" : 0,
+        "publishers" : 0
+    }
+]
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain liststreamitems trust_scores
+{"method":"liststreamitems","params":["trust_scores"],"id":"34382152-1791563154","chain_name":"iovchain"}
+
+[
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "V01"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563031222c2261646472657373223a2231555a784a625870475a34443366546b4353345667797747786771676d484d4743366d37626f222c2274727573745f73636f7265223a3130302e302c227265706f72745f636f756e74223a302c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22757064617465645f6174223a313739313536333033317d",
+        "confirmations" : 21,
+        "blocktime" : 1791563033,
+        "txid" : "ec44fee1c1dd56dd792dc7af9f80e09019aab8f9a97c33dad9faf0799e602034"
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "V02"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563032222c2261646472657373223a22314e45657a6f347731504c52796a72316a55434347445658753862343869466b6d79646e566b222c2274727573745f73636f7265223a3130302e302c227265706f72745f636f756e74223a302c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22757064617465645f6174223a313739313536333033317d",
+        "confirmations" : 21,
+        "blocktime" : 1791563033,
+        "txid" : "ff8fdb2d1d874d26779d239c88d527c93d6a6968f336bc89e64c5b4951fa384d"
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "V03"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563033222c2261646472657373223a2231614c76654e6d334c6839447956737055396f7147336b4b454c595a4143746f627142427a64222c2274727573745f73636f7265223a3130302e302c227265706f72745f636f756e74223a302c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22757064617465645f6174223a313739313536333033317d",
+        "confirmations" : 21,
+        "blocktime" : 1791563033,
+        "txid" : "5e22843b32cec1b196552cfe60170fefc947a724b1ea611f0f86dc0f0cc9b449"
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "V04"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563034222c2261646472657373223a2231346d37756538705a43724e31735470356d774d324d6459533753316f357537574466366367222c2274727573745f73636f7265223a3130302e302c227265706f72745f636f756e74223a302c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22757064617465645f6174223a313739313536333033317d",
+        "confirmations" : 21,
+        "blocktime" : 1791563033,
+        "txid" : "f21ee7678fd4b51dc0d56ab4f6a1b56cdcfab9664f0c27a0b3284948d2099d44"
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "V05"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563035222c2261646472657373223a2231414c764555694b4d7934725348796f50577645486b386f544a53336856313532475938716d222c2274727573745f73636f7265223a3130302e302c227265706f72745f636f756e74223a302c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22757064617465645f6174223a313739313536333033317d",
+        "confirmations" : 21,
+        "blocktime" : 1791563033,
+        "txid" : "c7a0033819f985fdbddcf47b2125c6c1c5550086214e8b462307eadb3efc8e5b"
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "V06"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563036222c2261646472657373223a223138424b4d6a71474c35345173794c5a587366657062324a5a6d4a7a4c48616571477a555564222c2274727573745f73636f7265223a3130302e302c227265706f72745f636f756e74223a302c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22757064617465645f6174223a313739313536333033317d",
+        "confirmations" : 21,
+        "blocktime" : 1791563033,
+        "txid" : "02c3a8bf7dc7173e4a793463d76b33552c9457222848c3a72e63a5905d3d5273"
+    }
+]
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain liststreamitems misbehavior_reports
+{"method":"liststreamitems","params":["misbehavior_reports"],"id":"38958098-1791563168","chain_name":"iovchain"}
+
+[
+    {
+        "publishers" : [
+            "1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd"
+        ],
+        "keys" : [
+            "V03"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b227265706f72745f6964223a22522d31373931353633303330383839222c2276656869636c655f6964223a22563033222c2276656869636c655f61646472657373223a2231614c76654e6d334c6839447956737055396f7147336b4b454c595a4143746f627142427a64222c2273657373696f6e5f6964223a225332222c2274797065223a227061636b65745f64726f705f6f725f66616c73655f6d657373616765222c227365766572697479223a352c2264657461696c73223a2252657065617465642061626e6f726d616c20666f7277617264696e67206265686176696f72206f6273657276656420647572696e672073657373696f6e222c227265706f72746572223a2252535531222c2274696d657374616d70223a313739313536333033307d",
+        "confirmations" : 21,
+        "blocktime" : 1791563033,
+        "txid" : "bc6422eeb374db94bad48f1430c1d5aa5b9539ef60195898612154df7699f119"
+    }
+]
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>cd /d "%USERPROFILE%\Downloads\multichain-windows-2.3.3"
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain liststreamitems session_results
+{"method":"liststreamitems","params":["session_results"],"id":"31047700-1791564285","chain_name":"iovchain"}
+
+[
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "S1"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2273657373696f6e5f6964223a225331222c2276656869636c655f6964223a22563034222c22726573756c74223a22706172746963697061746564222c226f7574636f6d65223a226e6f726d616c222c2274696d657374616d70223a313739313536333033307d",
+        "confirmations" : 21,
+        "blocktime" : 1791563033,
+        "txid" : "c8b02c207e1980533f49b24e31d7e0e654bd08dd08ad1f1057ea0801c8f3d3fb"
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "S2"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2273657373696f6e5f6964223a225332222c2276656869636c655f6964223a22563032222c22726573756c74223a22706172746963697061746564222c226f7574636f6d65223a226d69736265686176696f725f6465746563746564222c2274696d657374616d70223a313739313536333033307d",
+        "confirmations" : 21,
+        "blocktime" : 1791563033,
+        "txid" : "e5a71a75978664a1279ccec2c38f316dea931328792bc226707948b2716fc6b1"
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "S2"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2273657373696f6e5f6964223a225332222c2276656869636c655f6964223a22563033222c22726573756c74223a22706172746963697061746564222c226f7574636f6d65223a226d69736265686176696f725f6465746563746564222c2274696d657374616d70223a313739313536333033307d",
+        "confirmations" : 21,
+        "blocktime" : 1791563033,
+        "txid" : "f86b774d7f6b2683547517c200574565dc83033892836fe727d9202b82f71541"
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "S2"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2273657373696f6e5f6964223a225332222c2276656869636c655f6964223a22563034222c22726573756c74223a22706172746963697061746564222c226f7574636f6d65223a226d69736265686176696f725f6465746563746564222c2274696d657374616d70223a313739313536333033307d",
+        "confirmations" : 21,
+        "blocktime" : 1791563033,
+        "txid" : "1adb47f73dffeff2308070fe6a3fb3ebe539d039dc139b73497aa7eaa08a5bc7"
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "S2"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2273657373696f6e5f6964223a225332222c2276656869636c655f6964223a22563035222c22726573756c74223a22706172746963697061746564222c226f7574636f6d65223a226d69736265686176696f725f6465746563746564222c2274696d657374616d70223a313739313536333033307d",
+        "confirmations" : 21,
+        "blocktime" : 1791563033,
+        "txid" : "ff1bcf4010289733db541b63a43d5bd162ccc358eece83bc999612196e8fbd6b"
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "S3"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2273657373696f6e5f6964223a225333222c2276656869636c655f6964223a22563031222c22726573756c74223a22706172746963697061746564222c226f7574636f6d65223a22706f73742d6d697469676174696f6e222c2274696d657374616d70223a313739313536333033307d",
+        "confirmations" : 21,
+        "blocktime" : 1791563033,
+        "txid" : "1c7324793826e7d98a99808b5b74bc3486c109aa08bc147b0ad1f2f061c1dbd8"
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "S3"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2273657373696f6e5f6964223a225333222c2276656869636c655f6964223a22563032222c22726573756c74223a22706172746963697061746564222c226f7574636f6d65223a22706f73742d6d697469676174696f6e222c2274696d657374616d70223a313739313536333033307d",
+        "confirmations" : 21,
+        "blocktime" : 1791563033,
+        "txid" : "652c68f1b3cbd14aef78ad494947f6531fff8af758fd3eecc7dc7a22d24edce6"
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "S3"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2273657373696f6e5f6964223a225333222c2276656869636c655f6964223a22563033222c22726573756c74223a22706172746963697061746564222c226f7574636f6d65223a22706f73742d6d697469676174696f6e222c2274696d657374616d70223a313739313536333033307d",
+        "confirmations" : 21,
+        "blocktime" : 1791563033,
+        "txid" : "eff6a509bd1b96b46221e49ce16205644c0e763b6594e428394a7915bad8c995"
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "S3"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2273657373696f6e5f6964223a225333222c2276656869636c655f6964223a22563035222c22726573756c74223a22706172746963697061746564222c226f7574636f6d65223a22706f73742d6d697469676174696f6e222c2274696d657374616d70223a313739313536333033317d",
+        "confirmations" : 21,
+        "blocktime" : 1791563033,
+        "txid" : "cb63c0c79bc8b9d5002658a006b914f870715d6572bf34b988b26059acca57a0"
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "S3"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2273657373696f6e5f6964223a225333222c2276656869636c655f6964223a22563036222c22726573756c74223a22706172746963697061746564222c226f7574636f6d65223a22706f73742d6d697469676174696f6e222c2274696d657374616d70223a313739313536333033317d",
+        "confirmations" : 21,
+        "blocktime" : 1791563033,
+        "txid" : "34d60a4eac1691b18fb3a2566c7f9ba4bfcd4018c743464f18c43dbd8ee66ceb"
+    }
+]
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>cd /d "%USERPROFILE%\blockchain\blockchain"
+
+C:\Users\kanee\blockchain\blockchain>findstr /n /i "def analyze def trust report_count misbehavior_reports liststreamitems publishfrom revocations" iov_trust.py
+19:STREAMS = ["vehicle_registry", "misbehavior_reports", "trust_scores", "session_results", "revocations"]
+20:ASSET = "TrustCredit"
+24:TRUST_THRESHOLD = 40.0
+27:def conf_values(node):
+43:def rpc(node, method, *params):
+46:    payload = json.dumps({"method": method, "params": list(params), "id": "iov-trust"}).encode("utf-8")
+65:def try_rpc(node, method, *params):
+76:def node_address(node):
+83:def all_stream_names():
+91:def all_asset_names():
+99:def grant_safe(address, permission):
+111:def load_state():
+122:def save_state(state):
+126:def ensure_streams():
+150:def publish(node, stream, key, obj, from_address=None):
+153:        return rpc(node, "publishfrom", from_address, stream, key, data_hex)
+157:def stream_records(stream):
+159:        items = rpc("TA", "liststreamitems", stream, True, 999999)
+162:            items = rpc("TA", "liststreamitems", stream)
+174:        obj.setdefault("_key", (item.get("keys") or [""])[0])
+175:        obj.setdefault("_txid", item.get("txid", ""))
+176:        obj.setdefault("_blocktime", item.get("blocktime", 0))
+181:def wait_for_block(node="TA", timeout=25):
+196:def setup():
+197:    print("\n=== IoV trust setup (existing chain is reused) ===")
+219:            vehicles.append({"id": f"V{i+1:02d}", "address": addr, "trust": 100.0, "status": "active"})
+230:        grant_safe(vehicle["address"], "misbehavior_reports.write")
+241:                "initial_trust": 100.0, "status": "active", "registered_at": int(time.time())
+250:def report(vehicle, session_id, report_type, severity, details, rsu="RSU1"):
+261:        txid = publish("VEH", "misbehavior_reports", vehicle, obj, v["address"])
+264:        txid = publish(rsu, "misbehavior_reports", vehicle, obj, node_address(rsu))
+270:def run_session(session_id, participants, outcome="normal", malicious_vehicle=None):
+289:def demo():
+292:        raise RuntimeError("Run `py -3 iov_trust.py setup` first.")
+299:    print("\nFinal trust table:")
+303:def analyse(rsu="RSU1"):
+306:    print(f"\n=== Trust analysis by {rsu} ===")
+308:    reports = stream_records("misbehavior_reports")
+309:    scores = stream_records("trust_scores")
+318:        # Demo trust heuristic: start at 100, subtract 12 points per verified report severity
+323:        record = {"vehicle_id": vid, "address": v["address"], "trust_score": score,
+324:                  "report_count": len(own_reports), "status": "active" if score >= TRUST_THRESHOLD else "flagged",
+326:        publish(rsu, "trust_scores", vid, record, state["addresses"][rsu])
+327:        v["trust"] = score
+328:        if score < TRUST_THRESHOLD:
+330:        print(f"{vid}: trust={score:.1f}, reports={len(own_reports)}, status={record['status']}")
+334:def enforce():
+338:    for rec in stream_records("trust_scores"):
+342:    revoked = {r.get("vehicle_id") for r in stream_records("revocations")}
+346:            print(f"{v['id']}: no trust score yet; skipped")
+348:        score = float(rec.get("trust_score", 100))
+349:        if score < TRUST_THRESHOLD and v["id"] not in revoked:
+352:                   "trust_score": score, "reason": "trust score below configured threshold",
+354:            publish("TA", "revocations", v["id"], rev, state["addresses"]["TA"])
+358:            v["trust"] = score
+360:                v["status"] = "active" if score >= TRUST_THRESHOLD else v.get("status", "flagged")
+365:def status():
+368:    for r in stream_records("trust_scores"):
+371:    revs = {r.get("vehicle_id"): r for r in stream_records("revocations") if r.get("vehicle_id")}
+372:    print("Vehicle  Trust  Status      Address")
+375:        score = scores.get(v["id"], {}).get("trust_score", v.get("trust", 100.0))
+389:def simulate(session_id):
+402:def bench(count):
+428:def usage():
+430:  py -3 iov_trust.py setup
+431:  py -3 iov_trust.py demo
+432:  py -3 iov_trust.py status
+433:  py -3 iov_trust.py simulate S1|S2|S3
+434:  py -3 iov_trust.py analyse RSU1|RSU2
+435:  py -3 iov_trust.py enforce
+436:  py -3 iov_trust.py bench 1|100|500|1000
+440:def main(argv):
+
+C:\Users\kanee\blockchain\blockchain>cd /d "%USERPROFILE%\blockchain\blockchain"
+
+C:\Users\kanee\blockchain\blockchain>py -3 -c "import iov_trust; print(iov_trust.stream_records('misbehavior_reports'))"
+[{'report_id': 'R-1791563030889', 'vehicle_id': 'V03', 'vehicle_address': '1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd', 'session_id': 'S2', 'type': 'packet_drop_or_false_message', 'severity': 5, 'details': 'Repeated abnormal forwarding behavior observed during session', 'reporter': 'RSU1', 'timestamp': 1791563030, '_key': 'V03', '_txid': 'bc6422eeb374db94bad48f1430c1d5aa5b9539ef60195898612154df7699f119', '_blocktime': 1791563033}]
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py analyse RSU1
+
+=== Trust analysis by RSU1 ===
+V01: trust=100.0, reports=0, status=active
+V02: trust=100.0, reports=0, status=active
+V03: trust=40.0, reports=1, status=active
+V04: trust=100.0, reports=0, status=active
+V05: trust=100.0, reports=0, status=active
+V06: trust=100.0, reports=0, status=active
+
+C:\Users\kanee\blockchain\blockchain>py -3 -c "import iov_trust; print([r for r in iov_trust.stream_records('trust_scores') if r.get('vehicle_id')=='V03'])"
+[{'vehicle_id': 'V03', 'address': '1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd', 'trust_score': 100.0, 'report_count': 0, 'status': 'active', 'analysed_by': 'RSU1', 'updated_at': 1791563031, '_key': 'V03', '_txid': '5e22843b32cec1b196552cfe60170fefc947a724b1ea611f0f86dc0f0cc9b449', '_blocktime': 1791563033}, {'vehicle_id': 'V03', 'address': '1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd', 'trust_score': 40.0, 'report_count': 1, 'status': 'active', 'analysed_by': 'RSU1', 'updated_at': 1791564500, '_key': 'V03', '_txid': 'e3182fab4d5ab2802bce588e3f1ede0b2d21bb29a21a6cd813b113d1ad16090b', '_blocktime': 1791564508}]
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py enforce
+
+=== TA enforcement ===
+V01: score 100.0, status active
+V02: score 100.0, status active
+V03: score 40.0, status active
+V04: score 100.0, status active
+V05: score 100.0, status active
+V06: score 100.0, status active
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py enforce
+
+=== TA enforcement ===
+V01: score 100.0, status active
+V02: score 100.0, status active
+V03: soft revocation/restriction recorded (score 40.0)
+V04: score 100.0, status active
+V05: score 100.0, status active
+V06: score 100.0, status active
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py status
+Vehicle  Trust  Status      Address
+-------  -----  ----------  -------
+V01      100.0  active      1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+V02      100.0  active      1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+V03       40.0  soft-revoked  1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+V04      100.0  active      14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+V05      100.0  active      1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+V06      100.0  active      18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+
+Node connectivity:
+TA: blocks=199, peers=6
+RSU1: blocks=199, peers=6
+RSU2: blocks=199, peers=6
+VEH: blocks=199, peers=6
+
+C:\Users\kanee\blockchain\blockchain>py -3 -c "import iov_trust; print(iov_trust.stream_records('revocations'))"
+[{'vehicle_id': 'V03', 'address': '1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd', 'level': 'soft', 'trust_score': 40.0, 'reason': 'trust score below configured threshold', 'revoked_at': 1791564628, '_key': 'V03', '_txid': '30e97ed7891b1948fba9a0f6582b18529ee779d1eb7a988119bc69a4b494256a', '_blocktime': 1791564633}]
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py bench 100
+Benchmark: publishing 100 session-result transactions...
+Transactions: 100
+Execution time: 1.521 seconds
+Throughput: 65.75 transactions/second
+Appended result to C:\Users\kanee\blockchain\blockchain\bench_results.csv
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py bench 500
+Benchmark: publishing 500 session-result transactions...
+Transactions: 500
+Execution time: 7.728 seconds
+Throughput: 64.70 transactions/second
+Appended result to C:\Users\kanee\blockchain\blockchain\bench_results.csv
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py status
+Vehicle  Trust  Status      Address
+-------  -----  ----------  -------
+V01      100.0  active      1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+V02      100.0  active      1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+V03       40.0  soft-revoked  1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+V04      100.0  active      14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+V05      100.0  active      1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+V06      100.0  active      18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+
+Node connectivity:
+TA: blocks=233, peers=6
+RSU1: blocks=233, peers=6
+RSU2: blocks=233, peers=6
+VEH: blocks=233, peers=6
+
+C:\Users\kanee\blockchain\blockchain>py -3 -c "import iov_trust; print(iov_trust.stream_records('misbehavior_reports'))"
+[{'report_id': 'R-1791563030889', 'vehicle_id': 'V03', 'vehicle_address': '1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd', 'session_id': 'S2', 'type': 'packet_drop_or_false_message', 'severity': 5, 'details': 'Repeated abnormal forwarding behavior observed during session', 'reporter': 'RSU1', 'timestamp': 1791563030, '_key': 'V03', '_txid': 'bc6422eeb374db94bad48f1430c1d5aa5b9539ef60195898612154df7699f119', '_blocktime': 1791563033}]
+
+C:\Users\kanee\blockchain\blockchain>py -3 -c "import iov_trust; print(iov_trust.stream_records('trust_scores'))"
+[{'vehicle_id': 'V01', 'address': '1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo', 'trust_score': 100.0, 'report_count': 0, 'status': 'active', 'analysed_by': 'RSU1', 'updated_at': 1791563031, '_key': 'V01', '_txid': 'ec44fee1c1dd56dd792dc7af9f80e09019aab8f9a97c33dad9faf0799e602034', '_blocktime': 1791563033}, {'vehicle_id': 'V02', 'address': '1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk', 'trust_score': 100.0, 'report_count': 0, 'status': 'active', 'analysed_by': 'RSU1', 'updated_at': 1791563031, '_key': 'V02', '_txid': 'ff8fdb2d1d874d26779d239c88d527c93d6a6968f336bc89e64c5b4951fa384d', '_blocktime': 1791563033}, {'vehicle_id': 'V03', 'address': '1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd', 'trust_score': 100.0, 'report_count': 0, 'status': 'active', 'analysed_by': 'RSU1', 'updated_at': 1791563031, '_key': 'V03', '_txid': '5e22843b32cec1b196552cfe60170fefc947a724b1ea611f0f86dc0f0cc9b449', '_blocktime': 1791563033}, {'vehicle_id': 'V04', 'address': '14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg', 'trust_score': 100.0, 'report_count': 0, 'status': 'active', 'analysed_by': 'RSU1', 'updated_at': 1791563031, '_key': 'V04', '_txid': 'f21ee7678fd4b51dc0d56ab4f6a1b56cdcfab9664f0c27a0b3284948d2099d44', '_blocktime': 1791563033}, {'vehicle_id': 'V05', 'address': '1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm', 'trust_score': 100.0, 'report_count': 0, 'status': 'active', 'analysed_by': 'RSU1', 'updated_at': 1791563031, '_key': 'V05', '_txid': 'c7a0033819f985fdbddcf47b2125c6c1c5550086214e8b462307eadb3efc8e5b', '_blocktime': 1791563033}, {'vehicle_id': 'V06', 'address': '18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd', 'trust_score': 100.0, 'report_count': 0, 'status': 'active', 'analysed_by': 'RSU1', 'updated_at': 1791563031, '_key': 'V06', '_txid': '02c3a8bf7dc7173e4a793463d76b33552c9457222848c3a72e63a5905d3d5273', '_blocktime': 1791563033}, {'vehicle_id': 'V01', 'address': '1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo', 'trust_score': 100.0, 'report_count': 0, 'status': 'active', 'analysed_by': 'RSU1', 'updated_at': 1791564500, '_key': 'V01', '_txid': '1a0e9503c9b649602cf980e2c1f0939b24a010ca62198ff6153350f1823e93b0', '_blocktime': 1791564508}, {'vehicle_id': 'V02', 'address': '1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk', 'trust_score': 100.0, 'report_count': 0, 'status': 'active', 'analysed_by': 'RSU1', 'updated_at': 1791564500, '_key': 'V02', '_txid': '169128cc4e87a894e8f722ab203141315d8e1d5c9fa40d79b63bd59ce9538f01', '_blocktime': 1791564508}, {'vehicle_id': 'V03', 'address': '1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd', 'trust_score': 40.0, 'report_count': 1, 'status': 'active', 'analysed_by': 'RSU1', 'updated_at': 1791564500, '_key': 'V03', '_txid': 'e3182fab4d5ab2802bce588e3f1ede0b2d21bb29a21a6cd813b113d1ad16090b', '_blocktime': 1791564508}, {'vehicle_id': 'V04', 'address': '14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg', 'trust_score': 100.0, 'report_count': 0, 'status': 'active', 'analysed_by': 'RSU1', 'updated_at': 1791564500, '_key': 'V04', '_txid': '689c8469428c27f677b3b4e524a2782c111ed3c43beb01c63e2944bd431c6456', '_blocktime': 1791564508}, {'vehicle_id': 'V05', 'address': '1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm', 'trust_score': 100.0, 'report_count': 0, 'status': 'active', 'analysed_by': 'RSU1', 'updated_at': 1791564500, '_key': 'V05', '_txid': 'a538ac4724fc6a46b66cb4b1bb3cbe016affa1bc70606a066bf5e8d604d76783', '_blocktime': 1791564508}, {'vehicle_id': 'V06', 'address': '18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd', 'trust_score': 100.0, 'report_count': 0, 'status': 'active', 'analysed_by': 'RSU1', 'updated_at': 1791564500, '_key': 'V06', '_txid': '7f5d6b606bcc4001f890d3ad6514baf0cc0f4a6c63f49575f0557a2c7064b8ee', '_blocktime': 1791564508}]
+
+C:\Users\kanee\blockchain\blockchain>py -3 -c "import iov_trust; print(iov_trust.stream_records('revocations'))"
+[{'vehicle_id': 'V03', 'address': '1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd', 'level': 'soft', 'trust_score': 40.0, 'reason': 'trust score below configured threshold', 'revoked_at': 1791564628, '_key': 'V03', '_txid': '30e97ed7891b1948fba9a0f6582b18529ee779d1eb7a988119bc69a4b494256a', '_blocktime': 1791564633}]
+
+C:\Users\kanee\blockchain\blockchain>cd /d C:\Users\kanee\blockchain\blockchain
+
+C:\Users\kanee\blockchain\blockchain>py -3 -m py_compile iov_trust.py
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py demo
+
+--- Session S1: normal ---
+Session submitted in 0.086s
+
+--- Session S2: misbehavior_detected ---
+Session submitted in 0.040s
+Report by V01 recorded: 56baa8c1125670a64818e21b7978d1eaaae5c6da9500369b7c1fb17ed54c6a06
+Report by V02 recorded: 13532f9ca69793f431f2235ad20b5ea153e95eb0b9c5c11321147a6f9ca69a37
+Report by V04 recorded: 87e9d59ded30867b311b06b286740252368134581735fe0ab4653ffcde65b8f1
+Report by V05 recorded: 816399be3d858cfbd84c6acf4b68e1682e0e5d644b2ebf700eb558175281d3d7
+
+--- Session S3: post-mitigation ---
+Session submitted in 0.043s
+
+=== Reference-style trust analysis by RSU1 ===
+V01: reports=0
+V01: no punishment - minimum 4 reporters required.
+V02: reports=0
+V02: no punishment - minimum 4 reporters required.
+V03: reports=4
+V03: plausibility check detected abnormal behaviour.
+V03: trust 60.0 -> 48.0
+WARNING: reward failed for RSU1: RSU1.sendassetfrom HTTP 500: {"result":null,"error":{"code":-6,"message":"Insufficient funds."},"id":"iov-trust"}
+
+WARNING: reward failed for V01: RSU1.sendassetfrom HTTP 500: {"result":null,"error":{"code":-6,"message":"Insufficient funds."},"id":"iov-trust"}
+
+WARNING: reward failed for V02: RSU1.sendassetfrom HTTP 500: {"result":null,"error":{"code":-6,"message":"Insufficient funds."},"id":"iov-trust"}
+
+WARNING: reward failed for V04: RSU1.sendassetfrom HTTP 500: {"result":null,"error":{"code":-6,"message":"Insufficient funds."},"id":"iov-trust"}
+
+V04: reports=0
+V04: no punishment - minimum 4 reporters required.
+V05: reports=0
+V05: no punishment - minimum 4 reporters required.
+V06: reports=0
+V06: no punishment - minimum 4 reporters required.
+
+=== TA enforcement ===
+V01: score=100.0, status=active
+V02: score=100.0, status=active
+V03: score=48.0, status=active
+V04: score=100.0, status=active
+V05: score=100.0, status=active
+V06: score=100.0, status=active
+
+Final trust table:
+Vehicle  Trust  Status        Address
+-------  -----  ------------  -------
+V01      100.0  active        1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+V02      100.0  active        1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+V03       48.0  active        1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+V04      100.0  active        14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+V05      100.0  active        1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+V06      100.0  active        18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+
+Node connectivity:
+TA: blocks=451, peers=6
+RSU1: blocks=451, peers=6
+RSU2: blocks=451, peers=6
+VEH: blocks=451, peers=6
+
+C:\Users\kanee\blockchain\blockchain>multichain-cli iovchain listassets
+'multichain-cli' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kanee\blockchain\blockchain>where /r "%ProgramFiles%" multichain-cli.exe
+INFO: Could not find files for the given pattern(s).
+
+C:\Users\kanee\blockchain\blockchain>dir "C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe"
+ Volume in drive C is Windows
+ Volume Serial Number is 326D-3A92
+
+ Directory of C:\Users\kanee\Downloads\multichain-windows-2.3.3
+
+16/05/2023  12:41 pm         5,198,850 multichain-cli.exe
+               1 File(s)      5,198,850 bytes
+               0 Dir(s)  54,127,882,240 bytes free
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain listassets
+{"method":"listassets","params":[],"id":"86566057-1791568154","chain_name":"iovchain"}
+
+[
+    {
+        "name" : "TrustCredit",
+        "issuetxid" : "5370239a76ddb42898f9edd62dafa775c8707b34dacb61a2596f89a14816dd54",
+        "assetref" : "102-3499-28755",
+        "multiple" : 1,
+        "units" : 1,
+        "open" : true,
+        "restrict" : {
+            "send" : false,
+            "receive" : false,
+            "issue" : true
+        },
+        "fungible" : true,
+        "canopen" : false,
+        "canclose" : false,
+        "totallimit" : null,
+        "issuelimit" : null,
+        "details" : {
+        },
+        "issuecount" : 1,
+        "issueqty" : 100000,
+        "issueraw" : 100000,
+        "subscribed" : false
+    }
+]
+
+C:\Users\kanee\blockchain\blockchain>findstr /n /i "sendassetfrom TrustCredit Bitcoin reward" iov_trust.py
+99:ASSET = "TrustCredit"
+117:REWARD_CREDIT = 5
+1115:def ensure_reward_pool(addresses):
+1119:    Ensure RSU1 and RSU2 have TrustCredit
+1121:    available for reporter rewards.
+1133:            f"Reward asset {ASSET} "
+1193:            if current >= REWARD_CREDIT:
+1201:                    f"{current}, reward pool available."
+1217:                f"{node}: funding reward pool "
+1229:                "sendassetfrom",
+1247:                f"{ASSET} for reporter rewards."
+1261:                f"reward pool for {node}: {exc}"
+1383:    ensure_reward_pool(addresses)
+2397:def distribute_reporter_rewards(
+2409:    Reward reporters after a misbehavior
+2415:    Base reward = 5 TrustCredit.
+2475:    rewarded = set()
+2497:        if reporter in rewarded:
+2573:        reward = REWARD_CREDIT
+2579:            reward += ALARMER_BONUS
+2583:        reward_key = (
+2585:            f"REWARD-{suspect}-"
+2593:        already_rewarded = False
+2609:                == "reporter_reward"
+2623:                already_rewarded = True
+2629:        if already_rewarded:
+2635:                f"Reward already distributed "
+2645:            rewarded.add(reporter)
+2661:                "sendassetfrom",
+2669:                reward
+2675:            reward_record = {
+2679:                    "reporter_reward",
+2695:                "reward":
+2697:                    reward,
+2701:                "base_reward":
+2703:                    REWARD_CREDIT,
+2721:                "rewarded_by":
+2741:                reward_key,
+2743:                reward_record,
+2753:                f"Rewarded {reporter}: "
+2755:                f"{reward} {ASSET}"
+2761:            rewarded.add(reporter)
+2771:                f"WARNING: reward failed "
+3313:        distribute_reporter_rewards(
+4773:def reward_status():
+4781:        "\n=== TrustCredit Balances ==="
+5650:  py -3 iov_trust.py rewards
+5858:        elif cmd == "rewards":
+5862:            reward_status()
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain gettotalbalances
+{"method":"gettotalbalances","params":[],"id":"79476912-1791568211","chain_name":"iovchain"}
+
+[
+    {
+        "name" : "TrustCredit",
+        "assetref" : "102-3499-28755",
+        "qty" : 100000
+    }
+]
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain listassetbalances TrustCredit
+{"method":"listassetbalances","params":["TrustCredit"],"id":"44824976-1791568223","chain_name":"iovchain"}
+
+error code: -32601
+error message:
+Method not found
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain getaddresses
+{"method":"getaddresses","params":[],"id":"44709616-1791568262","chain_name":"iovchain"}
+
+[
+    "1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C"
+]
+
+C:\Users\kanee\blockchain\blockchain>findstr /n /i "sendassetfrom TrustCredit REWARD_CREDIT distribute_reporter_rewards" iov_trust.py
+99:ASSET = "TrustCredit"
+117:REWARD_CREDIT = 5
+1119:    Ensure RSU1 and RSU2 have TrustCredit
+1193:            if current >= REWARD_CREDIT:
+1229:                "sendassetfrom",
+2397:def distribute_reporter_rewards(
+2415:    Base reward = 5 TrustCredit.
+2573:        reward = REWARD_CREDIT
+2661:                "sendassetfrom",
+2703:                    REWARD_CREDIT,
+3313:        distribute_reporter_rewards(
+4781:        "\n=== TrustCredit Balances ==="
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain getaddressbalances 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+{"method":"getaddressbalances","params":["1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C"],"id":"88395336-1791568317","chain_name":"iovchain"}
+
+[
+    {
+        "name" : "TrustCredit",
+        "assetref" : "102-3499-28755",
+        "qty" : 100000
+    }
+]
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain sendassetfrom 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C 1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo TrustCredit 5
+{"method":"sendassetfrom","params":["1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C","1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo","TrustCredit",5],"id":"79015472-1791568367","chain_name":"iovchain"}
+
+aec0f074fdeebb36f206e6ed9f22890056cee3561d78570b1dadfba551758f63
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain getrawtransaction aec0f074fdeebb36f206e6ed9f22890056cee3561d78570b1dadfba551758f63 1
+{"method":"getrawtransaction","params":["aec0f074fdeebb36f206e6ed9f22890056cee3561d78570b1dadfba551758f63",1],"id":"23549302-1791568394","chain_name":"iovchain"}
+
+{
+    "hex" : "010000000154dd1648a1896f59a261cbda347b70c875a7af2dd6edf99828b4dd769a237053000000006b483045022100a3277e42d33768ea3cc8e9817ad9dd3b41ea59850303c12bd9609b8752c2b65602200f2927a9bd61e5077f83b66f8df460cd96d95e3395b3daea7cf4a5eef9c0569801210306cdd3c0096fb660d1fed6f78c1ac89c00c1066c944f16d46b38ff7b45a5b3f6ffffffff0200000000000000003776a914cbf98c6147b5f788f58db04ab0687322149fb63488ac1c73706b7175a7af2dd6edf99828b4dd769a23705305000000000000007500000000000000003776a9146efebad56bca42fa05fbdd745e3b116bc97f8bd988ac1c73706b7175a7af2dd6edf99828b4dd769a2370539b860100000000007500000000",
+    "txid" : "aec0f074fdeebb36f206e6ed9f22890056cee3561d78570b1dadfba551758f63",
+    "version" : 1,
+    "locktime" : 0,
+    "vin" : [
+        {
+            "txid" : "5370239a76ddb42898f9edd62dafa775c8707b34dacb61a2596f89a14816dd54",
+            "vout" : 0,
+            "scriptSig" : {
+                "asm" : "3045022100a3277e42d33768ea3cc8e9817ad9dd3b41ea59850303c12bd9609b8752c2b65602200f2927a9bd61e5077f83b66f8df460cd96d95e3395b3daea7cf4a5eef9c0569801 0306cdd3c0096fb660d1fed6f78c1ac89c00c1066c944f16d46b38ff7b45a5b3f6",
+                "hex" : "483045022100a3277e42d33768ea3cc8e9817ad9dd3b41ea59850303c12bd9609b8752c2b65602200f2927a9bd61e5077f83b66f8df460cd96d95e3395b3daea7cf4a5eef9c0569801210306cdd3c0096fb660d1fed6f78c1ac89c00c1066c944f16d46b38ff7b45a5b3f6"
+            },
+            "sequence" : 4294967295
+        }
+    ],
+    "vout" : [
+        {
+            "value" : 0,
+            "n" : 0,
+            "scriptPubKey" : {
+                "asm" : "OP_DUP OP_HASH160 cbf98c6147b5f788f58db04ab0687322149fb634 OP_EQUALVERIFY OP_CHECKSIG 73706b7175a7af2dd6edf99828b4dd769a2370530500000000000000 OP_DROP",
+                "hex" : "76a914cbf98c6147b5f788f58db04ab0687322149fb63488ac1c73706b7175a7af2dd6edf99828b4dd769a237053050000000000000075",
+                "reqSigs" : 1,
+                "type" : "pubkeyhash",
+                "addresses" : [
+                    "1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo"
+                ]
+            },
+            "assets" : [
+                {
+                    "name" : "TrustCredit",
+                    "issuetxid" : "5370239a76ddb42898f9edd62dafa775c8707b34dacb61a2596f89a14816dd54",
+                    "assetref" : "102-3499-28755",
+                    "qty" : 5,
+                    "raw" : 5,
+                    "type" : "transfer"
+                }
+            ]
+        },
+        {
+            "value" : 0,
+            "n" : 1,
+            "scriptPubKey" : {
+                "asm" : "OP_DUP OP_HASH160 6efebad56bca42fa05fbdd745e3b116bc97f8bd9 OP_EQUALVERIFY OP_CHECKSIG 73706b7175a7af2dd6edf99828b4dd769a2370539b86010000000000 OP_DROP",
+                "hex" : "76a9146efebad56bca42fa05fbdd745e3b116bc97f8bd988ac1c73706b7175a7af2dd6edf99828b4dd769a2370539b8601000000000075",
+                "reqSigs" : 1,
+                "type" : "pubkeyhash",
+                "addresses" : [
+                    "1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C"
+                ]
+            },
+            "assets" : [
+                {
+                    "name" : "TrustCredit",
+                    "issuetxid" : "5370239a76ddb42898f9edd62dafa775c8707b34dacb61a2596f89a14816dd54",
+                    "assetref" : "102-3499-28755",
+                    "qty" : 99995,
+                    "raw" : 99995,
+                    "type" : "transfer"
+                }
+            ]
+        }
+    ],
+    "blockhash" : "007fa467b3393a26745d3b9b634487a29cccae7e8d9fd813e03cd4fbaa43e561",
+    "confirmations" : 8,
+    "time" : 1791568375,
+    "blocktime" : 1791568375
+}
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain getaddressbalances 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+{"method":"getaddressbalances","params":["1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C"],"id":"53512680-1791568407","chain_name":"iovchain"}
+
+[
+    {
+        "name" : "TrustCredit",
+        "assetref" : "102-3499-28755",
+        "qty" : 99995
+    }
+]
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain getaddressbalances 1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+{"method":"getaddressbalances","params":["1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo"],"id":"69638355-1791568417","chain_name":"iovchain"}
+
+[
+]
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain getrawtransaction aec0f074fdeebb36f206e6ed9f22890056cee3561d78570b1dadfba551758f63 1
+{"method":"getrawtransaction","params":["aec0f074fdeebb36f206e6ed9f22890056cee3561d78570b1dadfba551758f63",1],"id":"81072725-1791568452","chain_name":"iovchain"}
+
+{
+    "hex" : "010000000154dd1648a1896f59a261cbda347b70c875a7af2dd6edf99828b4dd769a237053000000006b483045022100a3277e42d33768ea3cc8e9817ad9dd3b41ea59850303c12bd9609b8752c2b65602200f2927a9bd61e5077f83b66f8df460cd96d95e3395b3daea7cf4a5eef9c0569801210306cdd3c0096fb660d1fed6f78c1ac89c00c1066c944f16d46b38ff7b45a5b3f6ffffffff0200000000000000003776a914cbf98c6147b5f788f58db04ab0687322149fb63488ac1c73706b7175a7af2dd6edf99828b4dd769a23705305000000000000007500000000000000003776a9146efebad56bca42fa05fbdd745e3b116bc97f8bd988ac1c73706b7175a7af2dd6edf99828b4dd769a2370539b860100000000007500000000",
+    "txid" : "aec0f074fdeebb36f206e6ed9f22890056cee3561d78570b1dadfba551758f63",
+    "version" : 1,
+    "locktime" : 0,
+    "vin" : [
+        {
+            "txid" : "5370239a76ddb42898f9edd62dafa775c8707b34dacb61a2596f89a14816dd54",
+            "vout" : 0,
+            "scriptSig" : {
+                "asm" : "3045022100a3277e42d33768ea3cc8e9817ad9dd3b41ea59850303c12bd9609b8752c2b65602200f2927a9bd61e5077f83b66f8df460cd96d95e3395b3daea7cf4a5eef9c0569801 0306cdd3c0096fb660d1fed6f78c1ac89c00c1066c944f16d46b38ff7b45a5b3f6",
+                "hex" : "483045022100a3277e42d33768ea3cc8e9817ad9dd3b41ea59850303c12bd9609b8752c2b65602200f2927a9bd61e5077f83b66f8df460cd96d95e3395b3daea7cf4a5eef9c0569801210306cdd3c0096fb660d1fed6f78c1ac89c00c1066c944f16d46b38ff7b45a5b3f6"
+            },
+            "sequence" : 4294967295
+        }
+    ],
+    "vout" : [
+        {
+            "value" : 0,
+            "n" : 0,
+            "scriptPubKey" : {
+                "asm" : "OP_DUP OP_HASH160 cbf98c6147b5f788f58db04ab0687322149fb634 OP_EQUALVERIFY OP_CHECKSIG 73706b7175a7af2dd6edf99828b4dd769a2370530500000000000000 OP_DROP",
+                "hex" : "76a914cbf98c6147b5f788f58db04ab0687322149fb63488ac1c73706b7175a7af2dd6edf99828b4dd769a237053050000000000000075",
+                "reqSigs" : 1,
+                "type" : "pubkeyhash",
+                "addresses" : [
+                    "1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo"
+                ]
+            },
+            "assets" : [
+                {
+                    "name" : "TrustCredit",
+                    "issuetxid" : "5370239a76ddb42898f9edd62dafa775c8707b34dacb61a2596f89a14816dd54",
+                    "assetref" : "102-3499-28755",
+                    "qty" : 5,
+                    "raw" : 5,
+                    "type" : "transfer"
+                }
+            ]
+        },
+        {
+            "value" : 0,
+            "n" : 1,
+            "scriptPubKey" : {
+                "asm" : "OP_DUP OP_HASH160 6efebad56bca42fa05fbdd745e3b116bc97f8bd9 OP_EQUALVERIFY OP_CHECKSIG 73706b7175a7af2dd6edf99828b4dd769a2370539b86010000000000 OP_DROP",
+                "hex" : "76a9146efebad56bca42fa05fbdd745e3b116bc97f8bd988ac1c73706b7175a7af2dd6edf99828b4dd769a2370539b8601000000000075",
+                "reqSigs" : 1,
+                "type" : "pubkeyhash",
+                "addresses" : [
+                    "1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C"
+                ]
+            },
+            "assets" : [
+                {
+                    "name" : "TrustCredit",
+                    "issuetxid" : "5370239a76ddb42898f9edd62dafa775c8707b34dacb61a2596f89a14816dd54",
+                    "assetref" : "102-3499-28755",
+                    "qty" : 99995,
+                    "raw" : 99995,
+                    "type" : "transfer"
+                }
+            ]
+        }
+    ],
+    "blockhash" : "007fa467b3393a26745d3b9b634487a29cccae7e8d9fd813e03cd4fbaa43e561",
+    "confirmations" : 20,
+    "time" : 1791568375,
+    "blocktime" : 1791568375
+}
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain getrawtransaction aec0f074fdeebb36f206e6ed9f22890056cee3561d78570b1dadfba551758f63 1
+{"method":"getrawtransaction","params":["aec0f074fdeebb36f206e6ed9f22890056cee3561d78570b1dadfba551758f63",1],"id":"32237006-1791568578","chain_name":"iovchain"}
+
+{
+    "hex" : "010000000154dd1648a1896f59a261cbda347b70c875a7af2dd6edf99828b4dd769a237053000000006b483045022100a3277e42d33768ea3cc8e9817ad9dd3b41ea59850303c12bd9609b8752c2b65602200f2927a9bd61e5077f83b66f8df460cd96d95e3395b3daea7cf4a5eef9c0569801210306cdd3c0096fb660d1fed6f78c1ac89c00c1066c944f16d46b38ff7b45a5b3f6ffffffff0200000000000000003776a914cbf98c6147b5f788f58db04ab0687322149fb63488ac1c73706b7175a7af2dd6edf99828b4dd769a23705305000000000000007500000000000000003776a9146efebad56bca42fa05fbdd745e3b116bc97f8bd988ac1c73706b7175a7af2dd6edf99828b4dd769a2370539b860100000000007500000000",
+    "txid" : "aec0f074fdeebb36f206e6ed9f22890056cee3561d78570b1dadfba551758f63",
+    "version" : 1,
+    "locktime" : 0,
+    "vin" : [
+        {
+            "txid" : "5370239a76ddb42898f9edd62dafa775c8707b34dacb61a2596f89a14816dd54",
+            "vout" : 0,
+            "scriptSig" : {
+                "asm" : "3045022100a3277e42d33768ea3cc8e9817ad9dd3b41ea59850303c12bd9609b8752c2b65602200f2927a9bd61e5077f83b66f8df460cd96d95e3395b3daea7cf4a5eef9c0569801 0306cdd3c0096fb660d1fed6f78c1ac89c00c1066c944f16d46b38ff7b45a5b3f6",
+                "hex" : "483045022100a3277e42d33768ea3cc8e9817ad9dd3b41ea59850303c12bd9609b8752c2b65602200f2927a9bd61e5077f83b66f8df460cd96d95e3395b3daea7cf4a5eef9c0569801210306cdd3c0096fb660d1fed6f78c1ac89c00c1066c944f16d46b38ff7b45a5b3f6"
+            },
+            "sequence" : 4294967295
+        }
+    ],
+    "vout" : [
+        {
+            "value" : 0,
+            "n" : 0,
+            "scriptPubKey" : {
+                "asm" : "OP_DUP OP_HASH160 cbf98c6147b5f788f58db04ab0687322149fb634 OP_EQUALVERIFY OP_CHECKSIG 73706b7175a7af2dd6edf99828b4dd769a2370530500000000000000 OP_DROP",
+                "hex" : "76a914cbf98c6147b5f788f58db04ab0687322149fb63488ac1c73706b7175a7af2dd6edf99828b4dd769a237053050000000000000075",
+                "reqSigs" : 1,
+                "type" : "pubkeyhash",
+                "addresses" : [
+                    "1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo"
+                ]
+            },
+            "assets" : [
+                {
+                    "name" : "TrustCredit",
+                    "issuetxid" : "5370239a76ddb42898f9edd62dafa775c8707b34dacb61a2596f89a14816dd54",
+                    "assetref" : "102-3499-28755",
+                    "qty" : 5,
+                    "raw" : 5,
+                    "type" : "transfer"
+                }
+            ]
+        },
+        {
+            "value" : 0,
+            "n" : 1,
+            "scriptPubKey" : {
+                "asm" : "OP_DUP OP_HASH160 6efebad56bca42fa05fbdd745e3b116bc97f8bd9 OP_EQUALVERIFY OP_CHECKSIG 73706b7175a7af2dd6edf99828b4dd769a2370539b86010000000000 OP_DROP",
+                "hex" : "76a9146efebad56bca42fa05fbdd745e3b116bc97f8bd988ac1c73706b7175a7af2dd6edf99828b4dd769a2370539b8601000000000075",
+                "reqSigs" : 1,
+                "type" : "pubkeyhash",
+                "addresses" : [
+                    "1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C"
+                ]
+            },
+            "assets" : [
+                {
+                    "name" : "TrustCredit",
+                    "issuetxid" : "5370239a76ddb42898f9edd62dafa775c8707b34dacb61a2596f89a14816dd54",
+                    "assetref" : "102-3499-28755",
+                    "qty" : 99995,
+                    "raw" : 99995,
+                    "type" : "transfer"
+                }
+            ]
+        }
+    ],
+    "blockhash" : "007fa467b3393a26745d3b9b634487a29cccae7e8d9fd813e03cd4fbaa43e561",
+    "confirmations" : 21,
+    "time" : 1791568375,
+    "blocktime" : 1791568375
+}
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain liststreamitems trust_scores 20 0 true
+{"method":"liststreamitems","params":["trust_scores",20,0,true],"id":"94451734-1791568611","chain_name":"iovchain"}
+
+error code: -8
+error message:
+Invalid parameter value type, should be boolean
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain liststreamitems trust_scores 20 0 1
+{"method":"liststreamitems","params":["trust_scores",20,0,1],"id":"66660969-1791568644","chain_name":"iovchain"}
+
+error code: -8
+error message:
+Invalid parameter value type, should be boolean
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain liststreamitems trust_scores 20
+{"method":"liststreamitems","params":["trust_scores",20],"id":"32009033-1791568656","chain_name":"iovchain"}
+
+error code: -8
+error message:
+Invalid parameter value type, should be boolean
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain liststreamitems trust_scores 20 0 false
+{"method":"liststreamitems","params":["trust_scores",20,0,false],"id":"27205114-1791568720","chain_name":"iovchain"}
+
+error code: -8
+error message:
+Invalid parameter value type, should be boolean
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain liststreams
+{"method":"liststreams","params":[],"id":"17940610-1791568731","chain_name":"iovchain"}
+
+[
+    {
+        "name" : "root",
+        "createtxid" : "f07ed96a02e48d03b7d65e3ef9e30cb2165546d3ba4e780fd38945213a35bdb2",
+        "streamref" : "0-0-0",
+        "restrict" : {
+            "write" : true,
+            "read" : false,
+            "onchain" : false,
+            "offchain" : false
+        },
+        "details" : {
+        },
+        "subscribed" : true,
+        "retrieve" : true,
+        "canretrieve" : true,
+        "indexes" : {
+            "items" : true,
+            "keys" : true,
+            "publishers" : true,
+            "items-local" : true,
+            "keys-local" : true,
+            "publishers-local" : true
+        },
+        "synchronized" : true,
+        "items" : 0,
+        "confirmed" : 0,
+        "keys" : 0,
+        "publishers" : 0
+    },
+    {
+        "name" : "vehicle_registry",
+        "createtxid" : "b777b46a9c7e5f1a6122602e57cc0d3159bf721e9da2fd7fcd26fb2728531182",
+        "streamref" : "81-265-30647",
+        "restrict" : {
+            "write" : true,
+            "read" : false,
+            "onchain" : false,
+            "offchain" : false
+        },
+        "details" : {
+        },
+        "subscribed" : true,
+        "retrieve" : true,
+        "canretrieve" : true,
+        "indexes" : {
+            "items" : true,
+            "keys" : true,
+            "publishers" : true,
+            "items-local" : true,
+            "keys-local" : true,
+            "publishers-local" : true
+        },
+        "synchronized" : true,
+        "items" : 6,
+        "confirmed" : 6,
+        "keys" : 6,
+        "publishers" : 1
+    },
+    {
+        "name" : "misbehavior_reports",
+        "createtxid" : "ddfb6634d8bc0afff0d46dfae1f1d895b8e04df669ad32b6df3758d4ef6376c1",
+        "streamref" : "81-496-64477",
+        "restrict" : {
+            "write" : true,
+            "read" : false,
+            "onchain" : false,
+            "offchain" : false
+        },
+        "details" : {
+        },
+        "subscribed" : true,
+        "retrieve" : true,
+        "canretrieve" : true,
+        "indexes" : {
+            "items" : true,
+            "keys" : true,
+            "publishers" : true,
+            "items-local" : true,
+            "keys-local" : true,
+            "publishers-local" : true
+        },
+        "synchronized" : true,
+        "items" : 5,
+        "confirmed" : 5,
+        "keys" : 5,
+        "publishers" : 2
+    },
+    {
+        "name" : "trust_scores",
+        "createtxid" : "ecce60c3e394e109222fdaee4803c98027728abc03ab9c0242e21511dcf6d803",
+        "streamref" : "81-730-52972",
+        "restrict" : {
+            "write" : true,
+            "read" : false,
+            "onchain" : false,
+            "offchain" : false
+        },
+        "details" : {
+        },
+        "subscribed" : true,
+        "retrieve" : true,
+        "canretrieve" : true,
+        "indexes" : {
+            "items" : true,
+            "keys" : true,
+            "publishers" : true,
+            "items-local" : true,
+            "keys-local" : true,
+            "publishers-local" : true
+        },
+        "synchronized" : true,
+        "items" : 14,
+        "confirmed" : 14,
+        "keys" : 8,
+        "publishers" : 1
+    },
+    {
+        "name" : "session_results",
+        "createtxid" : "bb464a2da16187ef5afdcf82cccf24a79ff131a1e0f4cdbc5dd0a3cd764f48ac",
+        "streamref" : "81-957-18107",
+        "restrict" : {
+            "write" : true,
+            "read" : false,
+            "onchain" : false,
+            "offchain" : false
+        },
+        "details" : {
+        },
+        "subscribed" : true,
+        "retrieve" : true,
+        "canretrieve" : true,
+        "indexes" : {
+            "items" : true,
+            "keys" : true,
+            "publishers" : true,
+            "items-local" : true,
+            "keys-local" : true,
+            "publishers-local" : true
+        },
+        "synchronized" : true,
+        "items" : 641,
+        "confirmed" : 641,
+        "keys" : 618,
+        "publishers" : 1
+    },
+    {
+        "name" : "revocations",
+        "createtxid" : "7d6702b8c61649065376a382c04a056c47f9980d8dc23b0f5ce5c6b7917dc5d2",
+        "streamref" : "81-1187-26493",
+        "restrict" : {
+            "write" : true,
+            "read" : false,
+            "onchain" : false,
+            "offchain" : false
+        },
+        "details" : {
+        },
+        "subscribed" : true,
+        "retrieve" : true,
+        "canretrieve" : true,
+        "indexes" : {
+            "items" : true,
+            "keys" : true,
+            "publishers" : true,
+            "items-local" : true,
+            "keys-local" : true,
+            "publishers-local" : true
+        },
+        "synchronized" : true,
+        "items" : 1,
+        "confirmed" : 1,
+        "keys" : 1,
+        "publishers" : 1
+    }
+]
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain help liststreamitems
+{"method":"help","params":["liststreamitems"],"id":"45500656-1791568776","chain_name":"iovchain"}
+
+liststreamitems "stream-identifier" ( verbose count start local-ordering )
+
+Returns stream items.
+
+Arguments:
+1. "stream-identifier"              (string, required) Stream identifier - one of: create txid, stream reference, stream name.
+2. verbose                          (boolean, optional, default=false) If true, returns information about item transaction
+3. count                            (number, optional, default=10) The number of items to display
+4. start                            (number, optional, default=-count - last) Start from specific item, 0 based, if negative - from the end
+5. local-ordering                   (boolean, optional, default=false) If true, items appear in the order they were processed by the wallet,
+                                                                       if false - in the order they appear in blockchain
+
+Result:
+"stream-items"                      (array) List of stream items.
+
+Examples:
+> multichain-cli iovchain liststreamitems "test-stream"
+> multichain-cli iovchain liststreamitems "test-stream" true 10 100
+> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "liststreamitems", "params": ["test-stream", false, 20] }' -H 'content-type: text/plain;' http://127.0.0.1:7446
+
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain liststreamitems trust_scores true 20 0
+{"method":"liststreamitems","params":["trust_scores",true,20,0],"id":"43100070-1791568808","chain_name":"iovchain"}
+
+[
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "V01"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563031222c2261646472657373223a2231555a784a625870475a34443366546b4353345667797747786771676d484d4743366d37626f222c2274727573745f73636f7265223a3130302e302c227265706f72745f636f756e74223a302c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22757064617465645f6174223a313739313536333033317d",
+        "confirmations" : 343,
+        "blockhash" : "003dc678d56dcd0d5eefe4147a641fa33159db2d9c0953098b1d4238d44b330b",
+        "blockheight" : 151,
+        "blockindex" : 15,
+        "blocktime" : 1791563033,
+        "txid" : "ec44fee1c1dd56dd792dc7af9f80e09019aab8f9a97c33dad9faf0799e602034",
+        "vout" : 0,
+        "valid" : true,
+        "time" : 1791563031,
+        "timereceived" : 1791563031
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "V02"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563032222c2261646472657373223a22314e45657a6f347731504c52796a72316a55434347445658753862343869466b6d79646e566b222c2274727573745f73636f7265223a3130302e302c227265706f72745f636f756e74223a302c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22757064617465645f6174223a313739313536333033317d",
+        "confirmations" : 343,
+        "blockhash" : "003dc678d56dcd0d5eefe4147a641fa33159db2d9c0953098b1d4238d44b330b",
+        "blockheight" : 151,
+        "blockindex" : 16,
+        "blocktime" : 1791563033,
+        "txid" : "ff8fdb2d1d874d26779d239c88d527c93d6a6968f336bc89e64c5b4951fa384d",
+        "vout" : 0,
+        "valid" : true,
+        "time" : 1791563031,
+        "timereceived" : 1791563031
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "V03"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563033222c2261646472657373223a2231614c76654e6d334c6839447956737055396f7147336b4b454c595a4143746f627142427a64222c2274727573745f73636f7265223a3130302e302c227265706f72745f636f756e74223a302c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22757064617465645f6174223a313739313536333033317d",
+        "confirmations" : 343,
+        "blockhash" : "003dc678d56dcd0d5eefe4147a641fa33159db2d9c0953098b1d4238d44b330b",
+        "blockheight" : 151,
+        "blockindex" : 17,
+        "blocktime" : 1791563033,
+        "txid" : "5e22843b32cec1b196552cfe60170fefc947a724b1ea611f0f86dc0f0cc9b449",
+        "vout" : 0,
+        "valid" : true,
+        "time" : 1791563031,
+        "timereceived" : 1791563031
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "V04"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563034222c2261646472657373223a2231346d37756538705a43724e31735470356d774d324d6459533753316f357537574466366367222c2274727573745f73636f7265223a3130302e302c227265706f72745f636f756e74223a302c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22757064617465645f6174223a313739313536333033317d",
+        "confirmations" : 343,
+        "blockhash" : "003dc678d56dcd0d5eefe4147a641fa33159db2d9c0953098b1d4238d44b330b",
+        "blockheight" : 151,
+        "blockindex" : 18,
+        "blocktime" : 1791563033,
+        "txid" : "f21ee7678fd4b51dc0d56ab4f6a1b56cdcfab9664f0c27a0b3284948d2099d44",
+        "vout" : 0,
+        "valid" : true,
+        "time" : 1791563031,
+        "timereceived" : 1791563031
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "V05"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563035222c2261646472657373223a2231414c764555694b4d7934725348796f50577645486b386f544a53336856313532475938716d222c2274727573745f73636f7265223a3130302e302c227265706f72745f636f756e74223a302c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22757064617465645f6174223a313739313536333033317d",
+        "confirmations" : 343,
+        "blockhash" : "003dc678d56dcd0d5eefe4147a641fa33159db2d9c0953098b1d4238d44b330b",
+        "blockheight" : 151,
+        "blockindex" : 19,
+        "blocktime" : 1791563033,
+        "txid" : "c7a0033819f985fdbddcf47b2125c6c1c5550086214e8b462307eadb3efc8e5b",
+        "vout" : 0,
+        "valid" : true,
+        "time" : 1791563031,
+        "timereceived" : 1791563031
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "V06"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563036222c2261646472657373223a223138424b4d6a71474c35345173794c5a587366657062324a5a6d4a7a4c48616571477a555564222c2274727573745f73636f7265223a3130302e302c227265706f72745f636f756e74223a302c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22757064617465645f6174223a313739313536333033317d",
+        "confirmations" : 343,
+        "blockhash" : "003dc678d56dcd0d5eefe4147a641fa33159db2d9c0953098b1d4238d44b330b",
+        "blockheight" : 151,
+        "blockindex" : 20,
+        "blocktime" : 1791563033,
+        "txid" : "02c3a8bf7dc7173e4a793463d76b33552c9457222848c3a72e63a5905d3d5273",
+        "vout" : 0,
+        "valid" : true,
+        "time" : 1791563031,
+        "timereceived" : 1791563031
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "V01"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563031222c2261646472657373223a2231555a784a625870475a34443366546b4353345667797747786771676d484d4743366d37626f222c2274727573745f73636f7265223a3130302e302c227265706f72745f636f756e74223a302c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22757064617465645f6174223a313739313536343530307d",
+        "confirmations" : 322,
+        "blockhash" : "005fb8c35da156223d6eaffb1ca170837a47dda1c7a8720d25f96f455412e8d6",
+        "blockheight" : 172,
+        "blockindex" : 1,
+        "blocktime" : 1791564508,
+        "txid" : "1a0e9503c9b649602cf980e2c1f0939b24a010ca62198ff6153350f1823e93b0",
+        "vout" : 0,
+        "valid" : true,
+        "time" : 1791564501,
+        "timereceived" : 1791564501
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "V02"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563032222c2261646472657373223a22314e45657a6f347731504c52796a72316a55434347445658753862343869466b6d79646e566b222c2274727573745f73636f7265223a3130302e302c227265706f72745f636f756e74223a302c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22757064617465645f6174223a313739313536343530307d",
+        "confirmations" : 322,
+        "blockhash" : "005fb8c35da156223d6eaffb1ca170837a47dda1c7a8720d25f96f455412e8d6",
+        "blockheight" : 172,
+        "blockindex" : 2,
+        "blocktime" : 1791564508,
+        "txid" : "169128cc4e87a894e8f722ab203141315d8e1d5c9fa40d79b63bd59ce9538f01",
+        "vout" : 0,
+        "valid" : true,
+        "time" : 1791564501,
+        "timereceived" : 1791564501
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "V03"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563033222c2261646472657373223a2231614c76654e6d334c6839447956737055396f7147336b4b454c595a4143746f627142427a64222c2274727573745f73636f7265223a34302e302c227265706f72745f636f756e74223a312c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22757064617465645f6174223a313739313536343530307d",
+        "confirmations" : 322,
+        "blockhash" : "005fb8c35da156223d6eaffb1ca170837a47dda1c7a8720d25f96f455412e8d6",
+        "blockheight" : 172,
+        "blockindex" : 3,
+        "blocktime" : 1791564508,
+        "txid" : "e3182fab4d5ab2802bce588e3f1ede0b2d21bb29a21a6cd813b113d1ad16090b",
+        "vout" : 0,
+        "valid" : true,
+        "time" : 1791564501,
+        "timereceived" : 1791564501
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "V04"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563034222c2261646472657373223a2231346d37756538705a43724e31735470356d774d324d6459533753316f357537574466366367222c2274727573745f73636f7265223a3130302e302c227265706f72745f636f756e74223a302c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22757064617465645f6174223a313739313536343530307d",
+        "confirmations" : 322,
+        "blockhash" : "005fb8c35da156223d6eaffb1ca170837a47dda1c7a8720d25f96f455412e8d6",
+        "blockheight" : 172,
+        "blockindex" : 4,
+        "blocktime" : 1791564508,
+        "txid" : "689c8469428c27f677b3b4e524a2782c111ed3c43beb01c63e2944bd431c6456",
+        "vout" : 0,
+        "valid" : true,
+        "time" : 1791564501,
+        "timereceived" : 1791564501
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "V05"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563035222c2261646472657373223a2231414c764555694b4d7934725348796f50577645486b386f544a53336856313532475938716d222c2274727573745f73636f7265223a3130302e302c227265706f72745f636f756e74223a302c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22757064617465645f6174223a313739313536343530307d",
+        "confirmations" : 322,
+        "blockhash" : "005fb8c35da156223d6eaffb1ca170837a47dda1c7a8720d25f96f455412e8d6",
+        "blockheight" : 172,
+        "blockindex" : 5,
+        "blocktime" : 1791564508,
+        "txid" : "a538ac4724fc6a46b66cb4b1bb3cbe016affa1bc70606a066bf5e8d604d76783",
+        "vout" : 0,
+        "valid" : true,
+        "time" : 1791564501,
+        "timereceived" : 1791564501
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "V06"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563036222c2261646472657373223a223138424b4d6a71474c35345173794c5a587366657062324a5a6d4a7a4c48616571477a555564222c2274727573745f73636f7265223a3130302e302c227265706f72745f636f756e74223a302c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22757064617465645f6174223a313739313536343530307d",
+        "confirmations" : 322,
+        "blockhash" : "005fb8c35da156223d6eaffb1ca170837a47dda1c7a8720d25f96f455412e8d6",
+        "blockheight" : 172,
+        "blockindex" : 6,
+        "blocktime" : 1791564508,
+        "txid" : "7f5d6b606bcc4001f890d3ad6514baf0cc0f4a6c63f49575f0557a2c7064b8ee",
+        "vout" : 0,
+        "valid" : true,
+        "time" : 1791564501,
+        "timereceived" : 1791564501
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "RECOVERY-V03-1791565815891"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563033222c2274727573745f73636f7265223a36302e302c2270726576696f75735f73636f7265223a34302e302c226576656e74223a2274727573745f7265636f76657279222c227265636f766572795f706f696e7473223a32302e302c22726561736f6e223a227375636365737366756c5f6265686176696f725f7265636f76657279222c2274696d657374616d70223a313739313536353831357d",
+        "confirmations" : 217,
+        "blockhash" : "0050b8ee174df58e9d10612f77e2f4c1efa3ed41ab9427c879b88bb4229a6e55",
+        "blockheight" : 277,
+        "blockindex" : 1,
+        "blocktime" : 1791565817,
+        "txid" : "ed864f0c2cb4ecc2095537283f649663185146986d214d59c6081872a719469d",
+        "vout" : 0,
+        "valid" : true,
+        "time" : 1791565816,
+        "timereceived" : 1791565816
+    },
+    {
+        "publishers" : [
+            "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+        ],
+        "keys" : [
+            "REF-TRUST-V03-1791567929644"
+        ],
+        "offchain" : false,
+        "available" : true,
+        "data" : "7b2276656869636c655f6964223a22563033222c2261646472657373223a2231614c76654e6d334c6839447956737055396f7147336b4b454c595a4143746f627142427a64222c2274727573745f73636f7265223a34382e302c2270726576696f75735f74727573745f73636f7265223a36302e302c227265706f72745f636f756e74223a342c226d616a6f726974795f636f756e74223a342c226d616a6f726974795f74797065223a227061636b65745f64726f705f6f725f66616c73655f6d657373616765222c22706c6175736962696c6974795f706173736564223a66616c73652c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22616e616c797369735f74797065223a227265666572656e63655f7374796c65222c22757064617465645f6174223a313739313536373932397d",
+        "confirmations" : 42,
+        "blockhash" : "0050303e00dc2b8074931fae2a2891cfb5dbb8b58dd79937a692a0cdb8394c66",
+        "blockheight" : 452,
+        "blockindex" : 18,
+        "blocktime" : 1791567935,
+        "txid" : "fafc961208d53034ed83695ac9f0e59d19bbdc3e8846e88de09932091f81f1d4",
+        "vout" : 0,
+        "valid" : true,
+        "time" : 1791567930,
+        "timereceived" : 1791567930
+    }
+]
+
+C:\Users\kanee\blockchain\blockchain>"C:\Users\kanee\Downloads\multichain-windows-2.3.3\multichain-cli.exe" iovchain getrawtransaction fafc961208d53034ed83695ac9f0e59d19bbdc3e8846e88de09932091f81f1d4 1
+{"method":"getrawtransaction","params":["fafc961208d53034ed83695ac9f0e59d19bbdc3e8846e88de09932091f81f1d4",1],"id":"68256782-1791568885","chain_name":"iovchain"}
+
+{
+    "hex" : "01000000016a98892ce65d1e7d4e2d89b4aa0f5e1fa046e6a1bde72476aca52903d4a050e6010000006b4830450221009c2410086aa13d6e42062f30bdd46d9b61744aa6e39b5a0145eb5ee0223b30c8022047cb61d58171ce51a4caf40e336aa9083ee347be8e884537c88ba6e05e7dd4d101210398a0d26f1d90eb33ee13a529e00f684ace2f603404424c8e0162dcf3df14ff9affffffff020000000000000000fd81011473706b6580c90348eeda2f2209e194e3c360ceec751f73706b6b5245462d54525553542d5630332d31373931353637393239363434756a4d46017b2276656869636c655f6964223a22563033222c2261646472657373223a2231614c76654e6d334c6839447956737055396f7147336b4b454c595a4143746f627142427a64222c2274727573745f73636f7265223a34382e302c2270726576696f75735f74727573745f73636f7265223a36302e302c227265706f72745f636f756e74223a342c226d616a6f726974795f636f756e74223a342c226d616a6f726974795f74797065223a227061636b65745f64726f705f6f725f66616c73655f6d657373616765222c22706c6175736962696c6974795f706173736564223a66616c73652c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22616e616c797369735f74797065223a227265666572656e63655f7374796c65222c22757064617465645f6174223a313739313536373932397d00000000000000001976a914d97f972d9a75fe1057468bc754792a91dcd6994f88ac00000000",
+    "txid" : "fafc961208d53034ed83695ac9f0e59d19bbdc3e8846e88de09932091f81f1d4",
+    "version" : 1,
+    "locktime" : 0,
+    "vin" : [
+        {
+            "txid" : "e650a0d40329a5ac7624e7bda1e646a01f5e0faab4892d4e7d1e5de62c89986a",
+            "vout" : 1,
+            "scriptSig" : {
+                "asm" : "30450221009c2410086aa13d6e42062f30bdd46d9b61744aa6e39b5a0145eb5ee0223b30c8022047cb61d58171ce51a4caf40e336aa9083ee347be8e884537c88ba6e05e7dd4d101 0398a0d26f1d90eb33ee13a529e00f684ace2f603404424c8e0162dcf3df14ff9a",
+                "hex" : "4830450221009c2410086aa13d6e42062f30bdd46d9b61744aa6e39b5a0145eb5ee0223b30c8022047cb61d58171ce51a4caf40e336aa9083ee347be8e884537c88ba6e05e7dd4d101210398a0d26f1d90eb33ee13a529e00f684ace2f603404424c8e0162dcf3df14ff9a"
+            },
+            "sequence" : 4294967295
+        }
+    ],
+    "vout" : [
+        {
+            "value" : 0,
+            "n" : 0,
+            "scriptPubKey" : {
+                "asm" : "73706b6580c90348eeda2f2209e194e3c360ceec OP_DROP 73706b6b5245462d54525553542d5630332d31373931353637393239363434 OP_DROP OP_RETURN 7b2276656869636c655f6964223a22563033222c2261646472657373223a2231614c76654e6d334c6839447956737055396f7147336b4b454c595a4143746f627142427a64222c2274727573745f73636f7265223a34382e302c2270726576696f75735f74727573745f73636f7265223a36302e302c227265706f72745f636f756e74223a342c226d616a6f726974795f636f756e74223a342c226d616a6f726974795f74797065223a227061636b65745f64726f705f6f725f66616c73655f6d657373616765222c22706c6175736962696c6974795f706173736564223a66616c73652c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22616e616c797369735f74797065223a227265666572656e63655f7374796c65222c22757064617465645f6174223a313739313536373932397d",
+                "hex" : "1473706b6580c90348eeda2f2209e194e3c360ceec751f73706b6b5245462d54525553542d5630332d31373931353637393239363434756a4d46017b2276656869636c655f6964223a22563033222c2261646472657373223a2231614c76654e6d334c6839447956737055396f7147336b4b454c595a4143746f627142427a64222c2274727573745f73636f7265223a34382e302c2270726576696f75735f74727573745f73636f7265223a36302e302c227265706f72745f636f756e74223a342c226d616a6f726974795f636f756e74223a342c226d616a6f726974795f74797065223a227061636b65745f64726f705f6f725f66616c73655f6d657373616765222c22706c6175736962696c6974795f706173736564223a66616c73652c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22616e616c797369735f74797065223a227265666572656e63655f7374796c65222c22757064617465645f6174223a313739313536373932397d",
+                "type" : "nulldata"
+            },
+            "items" : [
+                {
+                    "type" : "stream",
+                    "name" : "trust_scores",
+                    "createtxid" : "ecce60c3e394e109222fdaee4803c98027728abc03ab9c0242e21511dcf6d803",
+                    "streamref" : "81-730-52972",
+                    "publishers" : [
+                        "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+                    ],
+                    "keys" : [
+                        "REF-TRUST-V03-1791567929644"
+                    ],
+                    "offchain" : false,
+                    "data" : "7b2276656869636c655f6964223a22563033222c2261646472657373223a2231614c76654e6d334c6839447956737055396f7147336b4b454c595a4143746f627142427a64222c2274727573745f73636f7265223a34382e302c2270726576696f75735f74727573745f73636f7265223a36302e302c227265706f72745f636f756e74223a342c226d616a6f726974795f636f756e74223a342c226d616a6f726974795f74797065223a227061636b65745f64726f705f6f725f66616c73655f6d657373616765222c22706c6175736962696c6974795f706173736564223a66616c73652c22737461747573223a22616374697665222c22616e616c797365645f6279223a2252535531222c22616e616c797369735f74797065223a227265666572656e63655f7374796c65222c22757064617465645f6174223a313739313536373932397d"
+                }
+            ]
+        },
+        {
+            "value" : 0,
+            "n" : 1,
+            "scriptPubKey" : {
+                "asm" : "OP_DUP OP_HASH160 d97f972d9a75fe1057468bc754792a91dcd6994f OP_EQUALVERIFY OP_CHECKSIG",
+                "hex" : "76a914d97f972d9a75fe1057468bc754792a91dcd6994f88ac",
+                "reqSigs" : 1,
+                "type" : "pubkeyhash",
+                "addresses" : [
+                    "1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc"
+                ]
+            }
+        }
+    ],
+    "blockhash" : "0050303e00dc2b8074931fae2a2891cfb5dbb8b58dd79937a692a0cdb8394c66",
+    "confirmations" : 42,
+    "time" : 1791567935,
+    "blocktime" : 1791567935
+}
+
+C:\Users\kanee\blockchain\blockchain>cd /d C:\Users\kanee\blockchain\blockchain
+
+C:\Users\kanee\blockchain\blockchain>py -3 claim_cycle.py cycle
+ERROR: TA.liststreams HTTP 500: {"result":null,"error":{"code":-708,"message":"Stream with this name not found: all"},"id":"iov-claim-cycle"}
+
+
+C:\Users\kanee\blockchain\blockchain>cd /d C:\Users\kanee\blockchain\blockchain
+
+C:\Users\kanee\blockchain\blockchain>py -3 claim_cycle.py cycle
+ERROR: TA.liststreams HTTP 500: {"result":null,"error":{"code":-708,"message":"Stream with this name not found: all"},"id":"iov-claim-cycle"}
+
+
+C:\Users\kanee\blockchain\blockchain>cd /d C:\Users\kanee\blockchain\blockchain
+
+C:\Users\kanee\blockchain\blockchain>py -3 claim_cycle.py cycle
+ERROR: TA.liststreams HTTP 500: {"result":null,"error":{"code":-708,"message":"Stream with this name not found: all"},"id":"iov-claim-cycle"}
+
+
+C:\Users\kanee\blockchain\blockchain>py -3 claim_cycle.py cycle
+Created stream reward_claims on existing chain.
+
+[1] TRUST DEDUCTION PUBLISHED
+Vehicle V03: 60.0 -> 48.0; reports=4; majority=4; plausibility_passed=false
+Trust-score TXID: 28a13025130e077b24f4ec453e8a66e2251fad9aba157be31c8ff0692c08626e
+
+[2] REWARD CLAIM CREATED
+Claim CLAIM-V01-1791569633: 5 TrustCredit; status=pending
+Claim-record TXID: 00307ad9595fd69798ab8f9ac1170e143e3afac66c89ad9df26cf8454f62854d
+
+[3] TRY PROTECTED ACTION BEFORE CLAIM
+BLOCKED: V01 cannot perform protected action; reward claim status=pending.
+Required: submit claim and wait for successful token transfer + claimed record.
+
+Cycle prepared. Next run: py -3 claim_cycle.py claim V01
+
+C:\Users\kanee\blockchain\blockchain>cd /d C:\Users\kanee\blockchain\blockchain
+
+C:\Users\kanee\blockchain\blockchain>py -3 -m py_compile iov_trust.py
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py transaction-cycle V03
+
+================ IoV FULL TRANSACTION CYCLE: CYCLE-1791570474 ================
+Report reporter=V01, address=1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo, TXID=e5dbfabd4d2af8841eeb9ad731ac78d19280e4edb58a8c58594eb5ce86e47584
+Report reporter=V02, address=1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk, TXID=5f09af669db785a460c459931a81c2704e2136dcbe67d5f65a7b3684cf572ad6
+Report reporter=V04, address=14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg, TXID=db4a0b8546412d71caf6ea107a0a451ad03b94f1a05a938fa6e609fb9c8e26e9
+Report reporter=V05, address=1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm, TXID=1cccacaa4b053052655ba36ae7ce249806fb9351838c420d0f10f9a20236b52e
+
+=== Reference-style analysis by RSU1; session=CYCLE-1791570474 ===
+V01: only 0 unique reporters; no deduction
+V02: only 0 unique reporters; no deduction
+V03: only 1 unique reporters; no deduction
+V04: only 0 unique reporters; no deduction
+V05: only 0 unique reporters; no deduction
+V06: only 0 unique reporters; no deduction
+
+=== TA enforcement ===
+V01: score=100.0; no new restriction
+V02: score=100.0; no new restriction
+V03: score=48.0; no new restriction
+V04: score=100.0; no new restriction
+V05: score=100.0; no new restriction
+V06: score=100.0; no new restriction
+
+--- Protected action before reward claim (claim gate enabled) ---
+Access GRANTED: vehicle=V01, operation=join_next_iov_session, reason=trusted_vehicle
+Access audit TXID=72d64929e065063e276ea3cb8b89a5f42270fc6a1c4a481f5cc7bd28f23f6cf6
+V01 reward claim not completed: No pending reward claim found for this vehicle.
+
+--- Protected action after reward claim attempt ---
+Access GRANTED: vehicle=V01, operation=join_next_iov_session, reason=trusted_vehicle
+Access audit TXID=9fe809788ae155056fb47c977f1ccb4da454802e01b6e7a2663f9809ef931059
+
+--- Final balances and vehicle status ---
+
+=== TrustCredit balances ===
+TA: 99995 TrustCredit
+RSU1: 0 TrustCredit
+RSU2: 0 TrustCredit
+
+=== Reward claims ===
+Vehicle  Trust  Status        Address
+-------  -----  ------------  -------
+V01      100.0  active        1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+V02      100.0  active        1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+V03       48.0  active        1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+V04      100.0  active        14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+V05      100.0  active        1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+V06      100.0  active        18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+
+Node connectivity:
+TA: blocks=514, peers=6
+RSU1: blocks=514, peers=6
+RSU2: blocks=514, peers=6
+VEH: blocks=514, peers=6
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py transaction-cycle V01
+
+================ IoV FULL TRANSACTION CYCLE: CYCLE-1791570585 ================
+Report reporter=V02, address=1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk, TXID=54bf0d9cb0aefe013149db13d720b747b4c4013d069967886609a770682e248b
+Report reporter=V04, address=14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg, TXID=79e7acbae0afbf1f3f0507b171ac74a92f052f3928a8848604e34129a205b0ab
+Report reporter=V05, address=1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm, TXID=db0a7328c19fbf353a592dfa2639964770854b53904cb3abe252860685f4cab1
+
+=== Reference-style analysis by RSU1; session=CYCLE-1791570585 ===
+V01: only 0 unique reporters; no deduction
+V02: only 0 unique reporters; no deduction
+V03: only 0 unique reporters; no deduction
+V04: only 0 unique reporters; no deduction
+V05: only 0 unique reporters; no deduction
+V06: only 0 unique reporters; no deduction
+
+=== TA enforcement ===
+V01: score=100.0; no new restriction
+V02: score=100.0; no new restriction
+V03: score=48.0; no new restriction
+V04: score=100.0; no new restriction
+V05: score=100.0; no new restriction
+V06: score=100.0; no new restriction
+
+--- Protected action before reward claim (claim gate enabled) ---
+Access GRANTED: vehicle=V01, operation=join_next_iov_session, reason=trusted_vehicle
+Access audit TXID=8b2c7f0e7017d969bf6175535d9f7b083de7d4e49581ae23cced52c56ed0f2a8
+V01 reward claim not completed: No pending reward claim found for this vehicle.
+
+--- Protected action after reward claim attempt ---
+Access GRANTED: vehicle=V01, operation=join_next_iov_session, reason=trusted_vehicle
+Access audit TXID=713709db8a122d981258e0bd0d387632e5ff0cac76aa06928bc8a6dd1284580a
+
+--- Final balances and vehicle status ---
+
+=== TrustCredit balances ===
+TA: 99995 TrustCredit
+RSU1: 0 TrustCredit
+RSU2: 0 TrustCredit
+
+=== Reward claims ===
+Vehicle  Trust  Status        Address
+-------  -----  ------------  -------
+V01      100.0  active        1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+V02      100.0  active        1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+V03       48.0  active        1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+V04      100.0  active        14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+V05      100.0  active        1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+V06      100.0  active        18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+
+Node connectivity:
+TA: blocks=536, peers=6
+RSU1: blocks=536, peers=6
+RSU2: blocks=536, peers=6
+VEH: blocks=536, peers=6
+
+C:\Users\kanee\blockchain\blockchain>py -3 -m py_compile iov_trust.py
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py transaction-cycle V03
+
+================ IoV FULL TRANSACTION CYCLE: CYCLE-1791570949-135 ================
+Target/simulated malicious vehicle=V03
+Four independent reporters=V01, V02, V04, V05
+Report reporter=V01, address=1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo, TXID=94b0d701050e311f63075ad4bc7b402213fe035f731d6136971896d7c994f34f
+Report reporter=V02, address=1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk, TXID=9f1450cf3bb589df59bcfcc4d014bb865b6e2ec0efffbcbfcd3a17cd30f183d5
+Report reporter=V04, address=14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg, TXID=83acd0b1c6470b2461c3972c362e4c195c87ebf173ab723948138a35fefd8f3a
+Report reporter=V05, address=1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm, TXID=f2cf285fe7071454e87e87edfecc23a8d66f241bd1281066e62ea0cda63d4b52
+Confirmed 4 session reports visible to TA/RSU analysis.
+
+=== Reference-style analysis by RSU1; session=CYCLE-1791570949-135 ===
+V01: only 0 unique reporters; no deduction
+V02: only 0 unique reporters; no deduction
+V03: 48.0 -> 36.0; reporters=4; score TXID=cb032f91e2ab88cf899aac9e09bb6bdefa9b035a8e48cd45071c5c6a2b66e696
+  Plausibility test also flagged abnormal beacon sequence for V03.
+
+ERROR: RSU1.publishfrom HTTP 500: {"result":null,"error":{"code":-704,"message":"Publishing in this stream is not allowed from this address"},"id":"iov-trust"}
+
+Check that all four existing MultiChain daemons are running and RPC ports/config files match this script.
+
+C:\Users\kanee\blockchain\blockchain>cd /d C:\Users\kanee\blockchain\blockchain
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py setup
+
+=== IoV setup: reusing existing chain; no reset/delete ===
+TA: chain=iovchain, blocks=578
+RSU1: chain=iovchain, blocks=578
+RSU2: chain=iovchain, blocks=578
+VEH: chain=iovchain, blocks=578
+Reusing stream: vehicle_registry
+Reusing stream: misbehavior_reports
+Reusing stream: trust_scores
+Reusing stream: session_results
+Reusing stream: revocations
+Reusing stream: reward_claims
+  granted vehicle_registry.read -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted misbehavior_reports.read -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted trust_scores.read -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted session_results.read -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted revocations.read -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted reward_claims.read -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted vehicle_registry.read -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted misbehavior_reports.read -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted trust_scores.read -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted session_results.read -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted revocations.read -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted reward_claims.read -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted vehicle_registry.read -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted misbehavior_reports.read -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted trust_scores.read -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted session_results.read -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted revocations.read -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted reward_claims.read -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted vehicle_registry.read -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+  granted misbehavior_reports.read -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+  granted trust_scores.read -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+  granted session_results.read -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+  granted revocations.read -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+  granted reward_claims.read -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+Reusing existing asset TrustCredit.
+RSU1: attempting to top up reward pool by 20000 TrustCredit from TA...
+RSU1 pool top-up TXID=677c52994ba0d69bbe98bc1a35004ff1f1c70edd4344638666bbcdc278168ae9
+RSU2: attempting to top up reward pool by 20000 TrustCredit from TA...
+RSU2 pool top-up TXID=233ecf13dfe36ba265e4437a183eea1dc8f86aa21de326644abf17912e35b832
+  granted connect,mine -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted vehicle_registry.write -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted misbehavior_reports.write -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted trust_scores.write -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted session_results.write -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted revocations.write -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted reward_claims.write -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted connect,mine -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted vehicle_registry.write -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted misbehavior_reports.write -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted trust_scores.write -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted session_results.write -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted revocations.write -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted reward_claims.write -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted connect -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+  granted connect -> 1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+  granted misbehavior_reports.write -> 1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+  granted connect -> 1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+  granted misbehavior_reports.write -> 1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+  granted connect -> 1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+  granted misbehavior_reports.write -> 1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+  granted connect -> 14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+  granted misbehavior_reports.write -> 14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+  granted connect -> 1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+  granted misbehavior_reports.write -> 1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+  granted connect -> 18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+  granted misbehavior_reports.write -> 18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+  granted vehicle_registry.write -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted misbehavior_reports.write -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted trust_scores.write -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted session_results.write -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted revocations.write -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted reward_claims.write -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+Setup complete. Existing chain history was not deleted.
+  V01: 1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+  V02: 1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+  V03: 1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+  V04: 14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+  V05: 1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+  V06: 18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py rewards
+
+=== TrustCredit balances ===
+TA: 59995 TrustCredit
+RSU1: 20000 TrustCredit
+RSU2: 20000 TrustCredit
+
+=== Reward claims ===
+
+C:\Users\kanee\blockchain\blockchain>py -3 -c "import iov_trust; print([x for x in dir(iov_trust) if 'claim' in x.lower() or 'reward' in x.lower()])"
+['REWARD_CREDIT', 'claim_reward', 'create_reward_claim', 'ensure_reward_pool', 'reward_status']
+
+C:\Users\kanee\blockchain\blockchain>py -3 -c "import iov_trust; [iov_trust.create_reward_claim(v, 'V03', 'CYCLE-1791570949-135', rsu='RSU1') for v in ['V01','V02','V04','V05']]"
+Pending reward claim for V01: 5 TrustCredit; TXID=900b2a6c8165ab447af5586cfd23d1159543ec663650d6a21cb832caa3e722ce
+Pending reward claim for V02: 5 TrustCredit; TXID=1925343b50faad4e5f0dc1a05486d034816f29fa7a52d8546b2ed804896f6e5e
+Pending reward claim for V04: 5 TrustCredit; TXID=fd9c9ec29903a7878266ae55823ab33f7c9fae39fc4b3e96b5bf4dbd5ba89461
+Pending reward claim for V05: 5 TrustCredit; TXID=54a26b9c512868b7a9c2d97509735250a83b65470ed200b1bc0146150c67037e
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py rewards
+
+=== TrustCredit balances ===
+TA: 59995 TrustCredit
+RSU1: 20000 TrustCredit
+RSU2: 20000 TrustCredit
+
+=== Reward claims ===
+CLAIM-CYCLE-1791570949-135-V03-V01 | V01 | pending | transfer=- | TXID=900b2a6c8165ab447af5586cfd23d1159543ec663650d6a21cb832caa3e722ce
+CLAIM-CYCLE-1791570949-135-V03-V02 | V02 | pending | transfer=- | TXID=1925343b50faad4e5f0dc1a05486d034816f29fa7a52d8546b2ed804896f6e5e
+CLAIM-CYCLE-1791570949-135-V03-V04 | V04 | pending | transfer=- | TXID=fd9c9ec29903a7878266ae55823ab33f7c9fae39fc4b3e96b5bf4dbd5ba89461
+CLAIM-CYCLE-1791570949-135-V03-V05 | V05 | pending | transfer=- | TXID=54a26b9c512868b7a9c2d97509735250a83b65470ed200b1bc0146150c67037e
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py access-claim V01
+Access DENIED: vehicle=V01, operation=protected_operation, reason=reward_claim_required
+Access audit TXID=b39187048a2ac08291d47b0227800b1d0303885e73ce62940efa19a98be6fc49
+Protected operation BLOCKED.
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py transaction-cycle RANDOM
+
+================ IoV FULL TRANSACTION CYCLE: CYCLE-1791571330-277 ================
+Target/simulated malicious vehicle=V05
+Four independent reporters=V01, V02, V03, V04
+Report reporter=V01, address=1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo, TXID=986383473ce5e31533acba1355f4e25ce996d510d326c1286772b94acca08e4f
+Report reporter=V02, address=1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk, TXID=88d968c9a48ad0ce6d9b1ea93d6a52cb7e5906da4c7c8e3ec1cd81d928cf6a81
+Report reporter=V03, address=1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd, TXID=a1e77b7439f998fd2a27255b981f66a198bd527a30e2ec34cec0ab30f73114ca
+Report reporter=V04, address=14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg, TXID=231dc1f16f5d202600527d3c54dd8016b7139091530977906f8528380c900beb
+Confirmed 4 session reports visible to TA/RSU analysis.
+
+=== Reference-style analysis by RSU1; session=CYCLE-1791571330-277 ===
+V01: only 0 unique reporters; no deduction
+V02: only 0 unique reporters; no deduction
+V03: only 0 unique reporters; no deduction
+V04: only 0 unique reporters; no deduction
+V05: 100.0 -> 88.0; reporters=4; score TXID=b170f7d957546b4863404e84c025413c674abd4d1c3a7ccade3772914eff9be6
+  Plausibility test also flagged abnormal beacon sequence for V05.
+Pending reward claim for V01: 5 TrustCredit; TXID=598f6d587183152a1cf7b572ae648ed1348aac93bdf7b078eca71fc21bd5586c
+Pending reward claim for V02: 5 TrustCredit; TXID=10e4cd9c27279c4e77aa24c860da1f66e7cffdf0b72af4ca5f826c6058a22eaf
+Pending reward claim for V03: 5 TrustCredit; TXID=452f79e9890ac8be141bb013a5cc0b8a01089bac47504c878a2b57aaf96fcb52
+Pending reward claim for V04: 5 TrustCredit; TXID=1d9b9fa6b2d37a7b67dc2b650d0774d7ca122907faeb5a3c8f9e6d70b215f4bf
+V06: only 0 unique reporters; no deduction
+
+=== TA enforcement ===
+V01: score=100.0; no new restriction
+V02: score=100.0; no new restriction
+Revoked send from 1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+Revoked misbehavior_reports.write from 1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+V03: soft restriction TXID=0fa98dd79c8ca10ad7c625796248a10b8f498196868001ec7d7d5938ecea36b8
+V04: score=100.0; no new restriction
+V05: score=100.0; no new restriction
+V06: score=100.0; no new restriction
+
+=== Reporter reward-claim and next-session access gate ===
+
+--- V01: access attempt BEFORE claiming reward ---
+Access DENIED: vehicle=V01, operation=join_next_iov_session, reason=reward_claim_required
+Access audit TXID=b935f25f2ab77467020707c780785fb3b972df8731c8abb43d9eb5e0f991fb16
+V01 reward claim NOT completed: No pending reward claim found for this vehicle.
+--- V01: access attempt AFTER claim attempt ---
+Access DENIED: vehicle=V01, operation=join_next_iov_session, reason=reward_claim_required
+Access audit TXID=52f8170fef19ed7e79591a9f89f19e7b383387b71b5d148df3a4506a611e2bf2
+
+--- V02: access attempt BEFORE claiming reward ---
+Access DENIED: vehicle=V02, operation=join_next_iov_session, reason=reward_claim_required
+Access audit TXID=28da04f16316ce9b99d8a43d5aefafc817ff396855d34cf208afe96f0a8ecbfa
+V02 reward claim NOT completed: No pending reward claim found for this vehicle.
+--- V02: access attempt AFTER claim attempt ---
+Access DENIED: vehicle=V02, operation=join_next_iov_session, reason=reward_claim_required
+Access audit TXID=f2e54ff7c07e10a3965b327cfbbfd85b4318fd3644f10767af4f6a087bf94739
+
+--- V03: access attempt BEFORE claiming reward ---
+Access DENIED: vehicle=V03, operation=join_next_iov_session, reason=reward_claim_required
+Access audit TXID=d180c4ef637945150f010e4c01d5169a19e5774eeec9c3d208efc13735c2e7e6
+V03 reward claim NOT completed: No pending reward claim found for this vehicle.
+--- V03: access attempt AFTER claim attempt ---
+Access DENIED: vehicle=V03, operation=join_next_iov_session, reason=reward_claim_required
+Access audit TXID=ab252fb8d39608bfc6f17c1b90938f9b67d4401faabacfec851de3592e165c63
+
+--- V04: access attempt BEFORE claiming reward ---
+Access DENIED: vehicle=V04, operation=join_next_iov_session, reason=reward_claim_required
+Access audit TXID=ef0e6533c4e080bf64f857f76bd6ba4716b4ed367a050b3d084c3cd8b1e348b0
+V04 reward claim NOT completed: No pending reward claim found for this vehicle.
+--- V04: access attempt AFTER claim attempt ---
+Access DENIED: vehicle=V04, operation=join_next_iov_session, reason=reward_claim_required
+Access audit TXID=70c545de1007bfd8897f917b75514cbcb01452bb7367795aa7ea5aba71c72a81
+
+--- Target V05: protected next-session access check ---
+Access DENIED: vehicle=V05, operation=join_next_iov_session, reason=reward_claim_required
+Access audit TXID=b616f38666104bb2eecb80d01aefc25c423246c31e26e32d59a09b9f1a25f08d
+
+--- Final balances and vehicle status ---
+
+=== TrustCredit balances ===
+TA: 59995 TrustCredit
+RSU1: 20000 TrustCredit
+RSU2: 20000 TrustCredit
+
+=== Reward claims ===
+CLAIM-CYCLE-1791570949-135-V03-V01 | V01 | pending | transfer=- | TXID=900b2a6c8165ab447af5586cfd23d1159543ec663650d6a21cb832caa3e722ce
+CLAIM-CYCLE-1791570949-135-V03-V02 | V02 | pending | transfer=- | TXID=1925343b50faad4e5f0dc1a05486d034816f29fa7a52d8546b2ed804896f6e5e
+CLAIM-CYCLE-1791570949-135-V03-V04 | V04 | pending | transfer=- | TXID=fd9c9ec29903a7878266ae55823ab33f7c9fae39fc4b3e96b5bf4dbd5ba89461
+CLAIM-CYCLE-1791570949-135-V03-V05 | V05 | pending | transfer=- | TXID=54a26b9c512868b7a9c2d97509735250a83b65470ed200b1bc0146150c67037e
+CLAIM-CYCLE-1791571330-277-V05-V01 | V01 | pending | transfer=- | TXID=598f6d587183152a1cf7b572ae648ed1348aac93bdf7b078eca71fc21bd5586c
+CLAIM-CYCLE-1791571330-277-V05-V02 | V02 | pending | transfer=- | TXID=10e4cd9c27279c4e77aa24c860da1f66e7cffdf0b72af4ca5f826c6058a22eaf
+CLAIM-CYCLE-1791571330-277-V05-V03 | V03 | pending | transfer=- | TXID=452f79e9890ac8be141bb013a5cc0b8a01089bac47504c878a2b57aaf96fcb52
+CLAIM-CYCLE-1791571330-277-V05-V04 | V04 | pending | transfer=- | TXID=1d9b9fa6b2d37a7b67dc2b650d0774d7ca122907faeb5a3c8f9e6d70b215f4bf
+Vehicle  Trust  Status        Address
+-------  -----  ------------  -------
+V01      100.0  active        1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+V02      100.0  active        1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+V03       36.0  soft-revoked  1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+V04      100.0  active        14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+V05       88.0  active        1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+V06      100.0  active        18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+
+Node connectivity:
+TA: blocks=621, peers=6
+RSU1: blocks=621, peers=6
+RSU2: blocks=622, peers=6
+VEH: blocks=621, peers=6
+
+C:\Users\kanee\blockchain\blockchain>

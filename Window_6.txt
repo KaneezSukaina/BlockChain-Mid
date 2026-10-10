@@ -1,0 +1,531 @@
+Microsoft Windows [Version 10.0.26200.9445]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\kanee>cd /d "%USERPROFILE%\blockchain\blockchain"
+
+C:\Users\kanee\blockchain\blockchain>py -3 -m py_compile iov_trust.py
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py setup
+
+=== IoV trust setup (existing chain is reused) ===
+TA: chain=iovchain, blocks=80
+RSU1: chain=iovchain, blocks=80
+RSU2: chain=iovchain, blocks=80
+VEH: chain=iovchain, blocks=80
+Created stream: vehicle_registry
+Created stream: misbehavior_reports
+Created stream: trust_scores
+Created stream: session_results
+Created stream: revocations
+  granted vehicle_registry.read -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted misbehavior_reports.read -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted trust_scores.read -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted session_results.read -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted revocations.read -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted vehicle_registry.read -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted misbehavior_reports.read -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted trust_scores.read -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted session_results.read -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted revocations.read -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted vehicle_registry.read -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted misbehavior_reports.read -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted trust_scores.read -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted session_results.read -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted revocations.read -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted vehicle_registry.read -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+  granted misbehavior_reports.read -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+  granted trust_scores.read -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+  granted session_results.read -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+  granted revocations.read -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+WARNING could not create TrustCredit: TA.issuefrom HTTP 500: {"result":null,"error":{"code":-702,"message":"Invalid field: units"},"id":"iov-trust"}
+
+If the asset already exists, this is safe to ignore.
+  granted connect,mine -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted vehicle_registry.write -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted misbehavior_reports.write -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted trust_scores.write -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted session_results.write -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted revocations.write -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted connect,mine -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted vehicle_registry.write -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted misbehavior_reports.write -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted trust_scores.write -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted session_results.write -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted revocations.write -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted connect -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+  granted connect -> 1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+  granted misbehavior_reports.write -> 1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+  granted connect -> 1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+  granted misbehavior_reports.write -> 1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+  granted connect -> 1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+  granted misbehavior_reports.write -> 1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+  granted connect -> 14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+  granted misbehavior_reports.write -> 14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+  granted connect -> 1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+  granted misbehavior_reports.write -> 1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+  granted connect -> 18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+  granted misbehavior_reports.write -> 18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+  granted vehicle_registry.write -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted misbehavior_reports.write -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted trust_scores.write -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted session_results.write -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted revocations.write -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+
+Setup completed. Chain data was not deleted or recreated.
+Vehicle pseudonyms:
+  V01: 1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+  V02: 1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+  V03: 1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+  V04: 14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+  V05: 1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+  V06: 18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py status
+Vehicle  Trust  Status      Address
+-------  -----  ----------  -------
+V01      100.0  active      1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+V02      100.0  active      1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+V03      100.0  active      1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+V04      100.0  active      14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+V05      100.0  active      1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+V06      100.0  active      18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+
+Node connectivity:
+TA: blocks=93, peers=6
+RSU1: blocks=93, peers=6
+RSU2: blocks=93, peers=6
+VEH: blocks=93, peers=6
+
+C:\Users\kanee\blockchain\blockchain>multichain-cli.exe iovchain listassets
+'multichain-cli.exe' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\kanee\blockchain\blockchain>cd /d "%USERPROFILE%\Downloads\multichain-windows-2.3.3"
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain listassets
+{"method":"listassets","params":[],"id":"68358409-1791562589","chain_name":"iovchain"}
+
+[
+]
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>cd /d "%USERPROFILE%\blockchain\blockchain"
+
+C:\Users\kanee\blockchain\blockchain>py -3 -m py_compile iov_trust.py
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py setup
+
+=== IoV trust setup (existing chain is reused) ===
+TA: chain=iovchain, blocks=101
+RSU1: chain=iovchain, blocks=101
+RSU2: chain=iovchain, blocks=101
+VEH: chain=iovchain, blocks=101
+Reusing stream: vehicle_registry
+Reusing stream: misbehavior_reports
+Reusing stream: trust_scores
+Reusing stream: session_results
+Reusing stream: revocations
+  granted vehicle_registry.read -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted misbehavior_reports.read -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted trust_scores.read -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted session_results.read -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted revocations.read -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted vehicle_registry.read -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted misbehavior_reports.read -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted trust_scores.read -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted session_results.read -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted revocations.read -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted vehicle_registry.read -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted misbehavior_reports.read -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted trust_scores.read -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted session_results.read -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted revocations.read -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted vehicle_registry.read -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+  granted misbehavior_reports.read -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+  granted trust_scores.read -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+  granted session_results.read -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+  granted revocations.read -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+Created asset TrustCredit (100000 units)
+  granted connect,mine -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted vehicle_registry.write -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted misbehavior_reports.write -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted trust_scores.write -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted session_results.write -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted revocations.write -> 1WPxxEzg7eBh144mQYBkSQdgnhqAk4HP6e49oc
+  granted connect,mine -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted vehicle_registry.write -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted misbehavior_reports.write -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted trust_scores.write -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted session_results.write -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted revocations.write -> 1S9uAgrhsM9JJdrUEcE5eKAWXAzJBXRrnS1USY
+  granted connect -> 17qrmfn1r6zknGFbJyWAZVF84SSCkGY12dfMUW
+  granted connect -> 1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+  granted misbehavior_reports.write -> 1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+  granted connect -> 1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+  granted misbehavior_reports.write -> 1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+  granted connect -> 1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+  granted misbehavior_reports.write -> 1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+  granted connect -> 14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+  granted misbehavior_reports.write -> 14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+  granted connect -> 1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+  granted misbehavior_reports.write -> 1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+  granted connect -> 18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+  granted misbehavior_reports.write -> 18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+  granted vehicle_registry.write -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted misbehavior_reports.write -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted trust_scores.write -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted session_results.write -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+  granted revocations.write -> 1G1655VGEH3RnNT5DTY4svu6SZpfi6nfWzB42C
+
+Setup completed. Chain data was not deleted or recreated.
+Vehicle pseudonyms:
+  V01: 1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+  V02: 1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+  V03: 1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+  V04: 14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+  V05: 1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+  V06: 18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+
+C:\Users\kanee\blockchain\blockchain>cd /d "%USERPROFILE%\Downloads\multichain-windows-2.3.3"
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichain-cli.exe iovchain listassets
+{"method":"listassets","params":[],"id":"67781609-1791562784","chain_name":"iovchain"}
+
+[
+    {
+        "name" : "TrustCredit",
+        "issuetxid" : "5370239a76ddb42898f9edd62dafa775c8707b34dacb61a2596f89a14816dd54",
+        "assetref" : "102-3499-28755",
+        "multiple" : 1,
+        "units" : 1,
+        "open" : true,
+        "restrict" : {
+            "send" : false,
+            "receive" : false,
+            "issue" : true
+        },
+        "fungible" : true,
+        "canopen" : false,
+        "canclose" : false,
+        "totallimit" : null,
+        "issuelimit" : null,
+        "details" : {
+        },
+        "issuecount" : 1,
+        "issueqty" : 100000,
+        "issueraw" : 100000,
+        "subscribed" : false
+    }
+]
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>py -3 -m py_compile iov_trust.py
+[Errno 2] No such file or directory: 'iov_trust.py'
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>cd /d "%USERPROFILE%\blockchain\blockchain"
+
+C:\Users\kanee\blockchain\blockchain>py -3 -m py_compile iov_trust.py
+Sorry: TabError: inconsistent use of tabs and spaces in indentation (iov_trust.py, line 543)
+C:\Users\kanee\blockchain\blockchain>cd /d "%USERPROFILE%\blockchain\blockchain"
+
+C:\Users\kanee\blockchain\blockchain>powershell -Command "Get-Content .\iov_trust.py | Select-Object -Skip 525 -First 35"
+  py -3 iov_trust.py enforce
+  py -3 iov_trust.py bench 1|100|500|1000
+  py -3 iov_trust.py access V01|V03
+""")
+
+
+def main(argv):
+    if len(argv) < 2:
+        usage(); return 2
+    cmd = argv[1].lower()
+    try:
+        if cmd == "setup": setup()
+        elif cmd == "demo": demo()
+        elif cmd == "status": status()
+        elif cmd == "simulate" and len(argv) >= 3: simulate(argv[2])
+        elif cmd == "analyse": analyse(argv[2] if len(argv) >= 3 else "RSU1")
+        elif cmd == "enforce": enforce()
+        elif cmd == "access" and len(argv) >= 3:
+            vehicle_id = argv[2].upper()
+            operation = (
+                argv[3] if len(argv) >= 4
+                else "protected_operation"
+            )
+            allowed = access_control(vehicle_id, operation)
+            if not allowed:
+                print("Protected operation BLOCKED.")
+        elif cmd == "bench" and len(argv) >= 3: bench(argv[2])
+        else: usage(); return 2
+    except KeyboardInterrupt:
+        print("\nStopped by user."); return 130
+    except Exception as exc:
+        print(f"\nERROR: {exc}", file=sys.stderr)
+        print("Check that all four MultiChain daemons are running and their RPC ports/config files match this script.", file=sys.stderr)
+        return 1
+    return 0
+
+C:\Users\kanee\blockchain\blockchain>cd /d "%USERPROFILE%\blockchain\blockchain"
+
+C:\Users\kanee\blockchain\blockchain>py -3 -m py_compile iov_trust.py
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py access V01 data_upload
+Access GRANTED: vehicle=V01, operation=data_upload, reason=trusted_vehicle
+Access decision audit recorded on blockchain.
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py access V03 data_upload
+Access DENIED: vehicle=V03, operation=data_upload, reason=vehicle_revoked_or_restricted
+Access decision audit recorded on blockchain.
+Protected operation BLOCKED.
+
+C:\Users\kanee\blockchain\blockchain>cd /d "%USERPROFILE%\blockchain\blockchain"
+
+C:\Users\kanee\blockchain\blockchain>py -3 -m py_compile iov_trust.py
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py access V03 data_upload
+Access DENIED: vehicle=V03, operation=data_upload, reason=vehicle_revoked_or_restricted
+Access decision audit recorded on blockchain.
+Protected operation BLOCKED.
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py recover V03
+V03: trust score recovered 40.0 -> 60.0
+V03: restriction removed. Vehicle reinstated as ACTIVE.
+V03: Access can now be GRANTED if the access-control check passes.
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py access V03 data_upload
+Access DENIED: vehicle=V03, operation=data_upload, reason=vehicle_revoked_or_restricted
+Access decision audit recorded on blockchain.
+Protected operation BLOCKED.
+
+C:\Users\kanee\blockchain\blockchain>py -3 -m py_compile iov_trust.py
+Sorry: IndentationError: unindent does not match any outer indentation level (iov_trust.py, line 369)
+C:\Users\kanee\blockchain\blockchain>py -3 -m py_compile iov_trust.py
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py access V03 data_upload
+Access GRANTED: vehicle=V03, operation=data_upload, reason=trusted_vehicle
+Access decision audit recorded on blockchain.
+
+C:\Users\kanee\blockchain\blockchain>py -3 -m py_compile iov_trust.py
+
+C:\Users\kanee\blockchain\blockchain>cd C:\Users\kanee\blockchain\blockchain
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py
+Usage:
+
+  py -3 iov_trust.py setup
+
+  py -3 iov_trust.py demo
+
+  py -3 iov_trust.py status
+
+  py -3 iov_trust.py simulate S1|S2|S3
+
+  py -3 iov_trust.py analyse RSU1|RSU2
+
+  py -3 iov_trust.py analyse-reference RSU1|RSU2
+
+  py -3 iov_trust.py enforce
+
+  py -3 iov_trust.py access V01|V03 [operation]
+
+  py -3 iov_trust.py recover V03
+
+  py -3 iov_trust.py rewards
+
+  py -3 iov_trust.py beacon-test V03 normal|teleport|erratic
+
+  py -3 iov_trust.py bench 1|100|500|1000
+
+
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py status
+Vehicle  Trust  Status      Address
+-------  -----  ----------  -------
+V01      100.0  active      1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+V02      100.0  active      1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+V03       60.0  soft-revoked  1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+V04      100.0  active      14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+V05      100.0  active      1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+V06      100.0  active      18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+
+Node connectivity:
+TA: blocks=327, peers=6
+RSU1: blocks=327, peers=6
+RSU2: blocks=327, peers=6
+VEH: blocks=327, peers=6
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py access V01
+Access GRANTED: vehicle=V01, operation=protected_operation, reason=trusted_vehicle
+Access decision audit recorded on blockchain.
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py access V03
+Access GRANTED: vehicle=V03, operation=protected_operation, reason=trusted_vehicle
+Access decision audit recorded on blockchain.
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py enforce
+
+=== TA enforcement ===
+V01: score=100.0, status=active
+V02: score=100.0, status=active
+V03: score=60.0, status=active
+V04: score=100.0, status=active
+V05: score=100.0, status=active
+V06: score=100.0, status=active
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py access V03
+Access GRANTED: vehicle=V03, operation=protected_operation, reason=trusted_vehicle
+Access decision audit recorded on blockchain.
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py access V03 protected_operation
+Access GRANTED: vehicle=V03, operation=protected_operation, reason=trusted_vehicle
+Access decision audit recorded on blockchain.
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py
+Usage:
+
+  py -3 iov_trust.py setup
+
+  py -3 iov_trust.py demo
+
+  py -3 iov_trust.py status
+
+  py -3 iov_trust.py simulate S1|S2|S3
+
+  py -3 iov_trust.py analyse RSU1|RSU2
+
+  py -3 iov_trust.py analyse-reference RSU1|RSU2
+
+  py -3 iov_trust.py enforce
+
+  py -3 iov_trust.py access V01|V03 [operation]
+
+  py -3 iov_trust.py recover V03
+
+  py -3 iov_trust.py rewards
+
+  py -3 iov_trust.py beacon-test V03 normal|teleport|erratic
+
+  py -3 iov_trust.py bench 1|100|500|1000
+
+
+
+C:\Users\kanee\blockchain\blockchain>py -3 -m py_compile iov_trust.py
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py access V01
+Access GRANTED: vehicle=V01, operation=protected_operation, reason=trusted_vehicle
+Access decision audit recorded on blockchain.
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py access V03
+Access GRANTED: vehicle=V03, operation=protected_operation, reason=trusted_vehicle
+Access decision audit recorded on blockchain.
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py analyse-reference RSU1
+
+=== Reference-style trust analysis by RSU1 ===
+V01: reports=0
+V01: no punishment - minimum 4 reporters required.
+V02: reports=0
+V02: no punishment - minimum 4 reporters required.
+V03: reports=1
+V03: no punishment - minimum 4 reporters required.
+V04: reports=0
+V04: no punishment - minimum 4 reporters required.
+V05: reports=0
+V05: no punishment - minimum 4 reporters required.
+V06: reports=0
+V06: no punishment - minimum 4 reporters required.
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py beacon-test V03 teleport
+Vehicle: V03
+Beacon type: teleport
+Plausibility: FAIL
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py status
+Vehicle  Trust  Status      Address
+-------  -----  ----------  -------
+V01      100.0  active      1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+V02      100.0  active      1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+V03       60.0  soft-revoked  1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+V04      100.0  active      14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+V05      100.0  active      1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+V06      100.0  active      18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+
+Node connectivity:
+TA: blocks=386, peers=6
+RSU1: blocks=386, peers=6
+RSU2: blocks=386, peers=6
+VEH: blocks=386, peers=6
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py access V03
+Access GRANTED: vehicle=V03, operation=protected_operation, reason=trusted_vehicle
+Access decision audit recorded on blockchain.
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py enforce
+
+=== TA enforcement ===
+V01: score=100.0, status=active
+V02: score=100.0, status=active
+V03: score=60.0, status=active
+V04: score=100.0, status=active
+V05: score=100.0, status=active
+V06: score=100.0, status=active
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py access V03
+Access GRANTED: vehicle=V03, operation=protected_operation, reason=trusted_vehicle
+Access decision audit recorded on blockchain.
+
+C:\Users\kanee\blockchain\blockchain>py -3 -m py_compile iov_trust.py
+  File "iov_trust.py", line 5226
+    print(f"{node}: ERROR {exc}")def simulate(session_id):
+                                 ^^^
+SyntaxError: invalid syntax
+
+C:\Users\kanee\blockchain\blockchain>py -3 -m py_compile iov_trust.py
+
+C:\Users\kanee\blockchain\blockchain>py -3 -m py_compile iov_trust.py
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py status
+Vehicle  Trust  Status        Address
+-------  -----  ------------  -------
+V01      100.0  active        1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+V02      100.0  active        1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+V03       60.0  active        1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+V04      100.0  active        14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+V05      100.0  active        1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+V06      100.0  active        18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+
+Node connectivity:
+TA: blocks=428, peers=6
+RSU1: blocks=428, peers=6
+RSU2: blocks=428, peers=6
+VEH: blocks=428, peers=6
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py access V03
+Access GRANTED: vehicle=V03, operation=protected_operation, reason=trusted_vehicle
+Access decision audit recorded on blockchain.
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py enforce
+
+=== TA enforcement ===
+V01: score=100.0, status=active
+V02: score=100.0, status=active
+V03: score=60.0, status=active
+V04: score=100.0, status=active
+V05: score=100.0, status=active
+V06: score=100.0, status=active
+
+C:\Users\kanee\blockchain\blockchain>py -3 iov_trust.py status
+Vehicle  Trust  Status        Address
+-------  -----  ------------  -------
+V01      100.0  active        1UZxJbXpGZ4D3fTkCS4VgywGxgqgmHMGC6m7bo
+V02      100.0  active        1NEezo4w1PLRyjr1jUCCGDVXu8b48iFkmydnVk
+V03       60.0  active        1aLveNm3Lh9DyVspU9oqG3kKELYZACtobqBBzd
+V04      100.0  active        14m7ue8pZCrN1sTp5mwM2MdYS7S1o5u7WDf6cg
+V05      100.0  active        1ALvEUiKMy4rSHyoPWvEHk8oTJS3hV152GY8qm
+V06      100.0  active        18BKMjqGL54QsyLZXsfepb2JZmJzLHaeqGzUUd
+
+Node connectivity:
+TA: blocks=432, peers=6
+RSU1: blocks=431, peers=6
+RSU2: blocks=431, peers=6
+VEH: blocks=431, peers=6
+
+C:\Users\kanee\blockchain\blockchain>

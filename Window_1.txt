@@ -1,0 +1,97 @@
+Microsoft Windows [Version 10.0.26200.9445]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\kanee>mkdir "%USERPROFILE%\blockchain"
+
+C:\Users\kanee>mkdir "%USERPROFILE%\blockchain\multichain"
+
+C:\Users\kanee>mkdir "%USERPROFILE%\blockchain\blockchain"
+
+C:\Users\kanee>mkdir "%USERPROFILE%\iov"
+
+C:\Users\kanee>mkdir "%USERPROFILE%\iov\rsu1"
+
+C:\Users\kanee>mkdir "%USERPROFILE%\iov\rsu2"
+
+C:\Users\kanee>mkdir "%USERPROFILE%\iov\veh"
+
+C:\Users\kanee>dir "%USERPROFILE%\blockchain"
+ Volume in drive C is Windows
+ Volume Serial Number is 326D-3A92
+
+ Directory of C:\Users\kanee\blockchain
+
+09/10/2026  08:27 pm    <DIR>          .
+09/10/2026  08:27 pm    <DIR>          ..
+09/10/2026  08:27 pm    <DIR>          blockchain
+09/10/2026  08:27 pm    <DIR>          multichain
+               0 File(s)              0 bytes
+               4 Dir(s)  59,252,326,400 bytes free
+
+C:\Users\kanee>dir "%USERPROFILE%\iov"
+ Volume in drive C is Windows
+ Volume Serial Number is 326D-3A92
+
+ Directory of C:\Users\kanee\iov
+
+09/10/2026  08:27 pm    <DIR>          .
+09/10/2026  08:27 pm    <DIR>          ..
+09/10/2026  08:27 pm    <DIR>          rsu1
+09/10/2026  08:27 pm    <DIR>          rsu2
+09/10/2026  08:27 pm    <DIR>          veh
+               0 File(s)              0 bytes
+               5 Dir(s)  59,252,326,400 bytes free
+
+C:\Users\kanee>dir "%USERPROFILE%\Downloads\*multichain*"
+ Volume in drive C is Windows
+ Volume Serial Number is 326D-3A92
+
+ Directory of C:\Users\kanee\Downloads
+
+09/10/2026  03:09 pm        12,061,993 iov-multichain (1).zip
+09/10/2026  03:00 pm        12,061,993 iov-multichain.zip
+09/10/2026  08:10 pm           544,421 IoV_Trust_MultiChain_CMD_Guide.pdf
+09/10/2026  06:19 pm    <DIR>          multichain-windows-2.3.3
+05/10/2026  10:55 pm        20,211,036 multichain-windows-2.3.3.zip
+05/10/2026  11:17 pm           485,970 MultiChain_IoV_Trust_Report.docx
+05/10/2026  11:20 pm           573,965 MultiChain_IoV_Trust_Report.pdf
+               6 File(s)     45,939,378 bytes
+               1 Dir(s)  59,252,383,744 bytes free
+
+C:\Users\kanee>dir "%USERPROFILE%\Downloads\multichain-windows-2.3.3\multichaind.exe"
+ Volume in drive C is Windows
+ Volume Serial Number is 326D-3A92
+
+ Directory of C:\Users\kanee\Downloads\multichain-windows-2.3.3
+
+16/05/2023  12:41 pm        14,440,959 multichaind.exe
+               1 File(s)     14,440,959 bytes
+               0 Dir(s)  59,255,631,872 bytes free
+
+C:\Users\kanee>notepad "%USERPROFILE%\blockchain\blockchain\iov_trust.py"
+
+C:\Users\kanee>notepad "%USERPROFILE%\blockchain\blockchain\iov_trust.py"
+
+C:\Users\kanee>cd /d "%USERPROFILE%\Downloads\multichain-windows-2.3.3"
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>dir "%APPDATA%\MultiChain\iovchain\params.dat"
+ Volume in drive C is Windows
+ Volume Serial Number is 326D-3A92
+
+ Directory of C:\Users\kanee\AppData\Roaming\MultiChain\iovchain
+
+09/10/2026  08:17 pm             9,349 params.dat
+               1 File(s)          9,349 bytes
+               0 Dir(s)  59,254,898,688 bytes free
+
+C:\Users\kanee\Downloads\multichain-windows-2.3.3>multichaind.exe iovchain -daemon
+
+MultiChain 2.3.3 Daemon (Community Edition, latest protocol 20013)
+
+Other nodes can connect to this node using:
+multichaind iovchain@192.168.0.101:7447
+
+Listening for API requests on port 7446 (local only - see rpcallowip setting)
+
+Node ready.
+
